@@ -1,126 +1,182 @@
-<header class="bg-white text-black p-3">
-  <div class="container d-flex justify-content-between align-items-center">
-    <h1 class="h4">Logo de la Empresa</h1>
-    <nav>
-      <a href="#" class="text-black me-3">Inicio</a>
-      <a href="#features" class="text-black me-3">Características</a>
-      <a href="#contact" class="text-black">Contacto</a>
+<!-- Header -->
+<header class="bg-body-secondary text-black p-1 shadow">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <!-- Logo de la empresa -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/logo-startes.png" alt="Logo de Startes" height="40" class="me-3">
+        <span class="text-black font-roboto">STARTES</span>
+      </a>
+
+      <!-- Botón de colapso para móvil -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces de navegación -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-black font-roboto" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black font-roboto" href="#services">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black font-roboto" href="#contact">Contacto</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>
 
-<section class="hero bg-primary text-white text-center py-5">
+<!-- Hero Section -->
+<section class="hero bg-light text-center py-5">
   <div class="container">
-    <h2 class="display-2">Bienvenido a Nuestra Empresa de Energía Renovable</h2>
-    <p class="lead">Soluciones sostenibles para un futuro mejor</p>
-    <a href="#contact" class="btn btn-light mt-3">Contáctanos</a>
-
-    <!-- Agrupación de tarjetas en disposición horizontal para pantallas grandes y en columna para móviles -->
-    <div
-      class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-4"
-    >
-      <div class="card card_red text-center">
-        <div class="title">
-          <i class="fa fa-paper-plane" aria-hidden="true"></i>
-          <h2>Basic</h2>
-        </div>
-        <div class="price">
-          <h4><sup>$</sup>25</h4>
-        </div>
-        <div class="option">
-          <ul>
-            <li><i class="fa fa-check" aria-hidden="true"></i>10 GB Space</li>
-            <li>
-              <i class="fa fa-check" aria-hidden="true"></i>3 Domain Names
-            </li>
-            <li>
-              <i class="fa fa-check" aria-hidden="true"></i>20 Emails Addresse
-            </li>
-            <li><i class="fa fa-times" aria-hidden="true"></i>Live Support</li>
-          </ul>
-        </div>
-        <a href="#">Order Now</a>
-      </div>
-
-      <div class="card card_violet text-center">
-        <div class="title">
-          <i class="fa fa-paper-plane" aria-hidden="true"></i>
-          <h2>Basic</h2>
-        </div>
-        <div class="price">
-          <h4><sup>$</sup>25</h4>
-        </div>
-        <div class="option">
-          <ul>
-            <li><i class="fa fa-check" aria-hidden="true"></i>10 GB Space</li>
-            <li>
-              <i class="fa fa-check" aria-hidden="true"></i>3 Domain Names
-            </li>
-            <li>
-              <i class="fa fa-check" aria-hidden="true"></i>20 Emails Addresse
-            </li>
-            <li><i class="fa fa-times" aria-hidden="true"></i>Live Support</li>
-          </ul>
-        </div>
-        <a href="#">Order Now</a>
-      </div>
-
-      <div class="card card_three text-center">
-        <div class="title">
-          <i class="fa fa-paper-plane" aria-hidden="true"></i>
-          <h2>Basic</h2>
-        </div>
-        <div class="price">
-          <h4><sup>$</sup>25</h4>
-        </div>
-        <div class="option">
-          <ul>
-            <li><i class="fa fa-check" aria-hidden="true"></i>10 GB Space</li>
-            <li>
-              <i class="fa fa-check" aria-hidden="true"></i>3 Domain Names
-            </li>
-            <li>
-              <i class="fa fa-check" aria-hidden="true"></i>20 Emails Addresse
-            </li>
-            <li><i class="fa fa-times" aria-hidden="true"></i>Live Support</li>
-          </ul>
-        </div>
-        <a href="#">Order Now</a>
-      </div>
-    </div>
+    <h2 class="text-black display-4">Energía Renovable para un Futuro Sostenible</h2>
+    <p class="lead">Instalación de placas fotovoltaicas y puntos de recarga para vehículos eléctricos</p>
+    <a href="#contact" class="btn btn-primary mt-3">Contáctanos</a>
   </div>
 </section>
 
-<section id="features" class="py-5">
+<!-- Services Section -->
+<section id="services" class="py-5">
   <div class="container">
-    <h3 class="text-center mb-4">Nuestras Características</h3>
+    <h3 class="text-center mb-5">Nuestros Servicios</h3>
     <div class="row">
-      <div class="col-md-4 text-center">
-        <i class="bi bi-lightbulb display-3 text-primary"></i>
-        <h4 class="mt-3">Eficiencia Energética</h4>
-        <p>Ofrecemos soluciones que ahorran energía y reducen costos.</p>
+      <!-- Servicio 1 -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow">
+          <img src="assets/placas-solares.jpg" class="card-img-top" alt="Placas Solares">
+          <div class="card-body">
+            <h5 class="card-title">Instalación de Placas Fotovoltaicas</h5>
+            <p class="card-text">Aprovecha la energía solar y reduce tus costos de electricidad con nuestras soluciones personalizadas.</p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 text-center">
-        <i class="bi bi-globe display-3 text-primary"></i>
-        <h4 class="mt-3">Impacto Global</h4>
-        <p>
-          Nuestros proyectos están orientados a un cambio positivo en el medio
-          ambiente.
-        </p>
-      </div>
-      <div class="col-md-4 text-center">
-        <i class="bi bi-sun display-3 text-primary"></i>
-        <h4 class="mt-3">Energía Solar</h4>
-        <p>Implementamos tecnologías de energía solar de última generación.</p>
+      <!-- Servicio 2 -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow">
+          <img src="assets/puntos-recarga.jpg" class="card-img-top" alt="Puntos de Recarga">
+          <div class="card-body">
+            <h5 class="card-title">Puntos de Recarga para Vehículos Eléctricos</h5>
+            <p class="card-text">Instalamos estaciones de carga en tu hogar o empresa para que siempre estés en movimiento.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Features Section -->
+<section id="features" class="bg-light py-5">
+  <div class="container">
+    <h3 class="text-center mb-5">¿Por Qué Elegir Startes?</h3>
+    <div class="row">
+      <!-- Feature 1 -->
+      <div class="col-md-4 text-center">
+        <i class="bi bi-lightning-charge-fill display-3 text-primary"></i>
+        <h4 class="mt-3">Tecnología Avanzada</h4>
+        <p>Utilizamos equipos de última generación para garantizar la máxima eficiencia.</p>
+      </div>
+      <!-- Feature 2 -->
+      <div class="col-md-4 text-center">
+        <i class="bi bi-shield-lock-fill display-3 text-primary"></i>
+        <h4 class="mt-3">Seguridad y Confiabilidad</h4>
+        <p>Nuestros expertos están certificados y garantizan instalaciones seguras.</p>
+      </div>
+      <!-- Feature 3 -->
+      <div class="col-md-4 text-center">
+        <i class="bi bi-people-fill display-3 text-primary"></i>
+        <h4 class="mt-3">Atención Personalizada</h4>
+        <p>Ofrecemos asesoramiento y soluciones adaptadas a tus necesidades.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h3 class="text-center mb-5">Contáctanos</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm" novalidate>
+          
+          <!-- Campo Nombre -->
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="contact.name" name="name" placeholder="Tu nombre" #name="ngModel">
+            <div *ngIf="name.invalid && name.touched" class="text-danger">
+              El campo Nombre es obligatorio.
+            </div>
+          </div>
+
+          <!-- Campo Correo Electrónico -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input 
+              type="email" 
+              class="form-control" 
+              id="email" 
+              required 
+              [(ngModel)]="contact.email" 
+              name="email" 
+              placeholder="tu@correo.com"
+              #email="ngModel" 
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+            <div *ngIf="email.invalid && email.touched" class="text-danger">
+              <div *ngIf="email.errors?.['required']">El campo Correo Electrónico es obligatorio.</div>
+              <div *ngIf="email.errors?.['pattern']">Por favor, introduce un correo electrónico válido.</div>
+            </div>
+          </div>
+
+          <!-- Campo Teléfono -->
+          <div class="mb-3">
+            <label for="phone" class="form-label">Teléfono</label>
+            <input 
+              type="tel" 
+              class="form-control" 
+              id="phone" 
+              required 
+              [(ngModel)]="contact.phone" 
+              name="phone" 
+              placeholder="Tu teléfono" 
+              #phone="ngModel">
+            <div *ngIf="phone.invalid && phone.touched" class="text-danger">
+              El campo Teléfono es obligatorio.
+            </div>
+          </div>
+
+          <!-- Campo Mensaje -->
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea 
+              class="form-control" 
+              id="message" 
+              rows="5" 
+              required 
+              [(ngModel)]="contact.message" 
+              name="message" 
+              placeholder="Tu mensaje"
+              #message="ngModel"></textarea>
+            <div *ngIf="message.invalid && message.touched" class="text-danger">
+              El campo Mensaje es obligatorio.
+            </div>
+          </div>
+
+          <!-- Botón Enviar -->
+          <button type="submit" class="btn btn-primary w-100" [disabled]="contactForm.invalid">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer class="bg-dark text-white text-center py-4">
   <div class="container">
-    <p>
-      &copy; 2024 Empresa de Energía Renovable. Todos los derechos reservados.
-    </p>
+    <p>&copy; 2024 Startes. Todos los derechos reservados.</p>
   </div>
 </footer>

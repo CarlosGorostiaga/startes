@@ -27,31 +27,10 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/css/bootstrap.min.css",
-              "src/assets/css/fontawesome.min.css",
-              "src/assets/css/jquery.fancybox.min.css",
-              "src/assets/css/nice-select.css",
-              "src/assets/css/owl.carousel.min.css",
-              "src/assets/css/owl.theme.default.min.css",
-              "src/assets/css/responsive.css",
-              "src/assets/css/slick-theme.css",
-              "src/assets/css/slick.css",
-              "src/assets/css/style.css",
-              "src/assets/css/swiper.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "src/assets/js/jquery-3.6.0.min.js",
-              "src/assets/js/bootstrap.min.js",
-              "src/assets/js/circle-progres.js",
-              "src/assets/js/contact.js",
-              "src/assets/js/custom.js",
-              "src/assets/js/jquery.fancybox.min.js",
-              "src/assets/js/jquery.nice-select.min.js",
-              "src/assets/js/owl.carousel.min.js",
-              "src/assets/js/preloader.js",
-              "src/assets/js/slick.min.js",
-              "src/assets/js/sweetalert.min.js",
-              "src/assets/js/swiper.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {

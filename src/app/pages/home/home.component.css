@@ -280,23 +280,31 @@
 .top-bar {
     background-color: #343a40; /* Color de fondo oscuro */
     font-size: 0.9rem;
+    color: #fff;
 }
 
 .top-bar .contact-item {
     color: #fff;
+    display: flex;
+    align-items: center; /* Alineación central */
 }
 
 .top-bar .contact-item i {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Tamaño del icono */
+    line-height: 1; /* Asegura la alineación vertical */
+    vertical-align: middle; /* Centrado del icono */
 }
 
 .top-bar a {
     color: #ffc107; /* Color para los enlaces */
     transition: color 0.3s;
+    font-size: 0.9rem; /* Asegura que el tamaño de texto sea igual al de la barra */
+    line-height: 1; /* Asegura alineación vertical */
 }
 
 .top-bar a:hover {
     color: #fff; /* Color al pasar el ratón */
 }
-  
+
+
 

@@ -274,5 +274,29 @@
     font-weight: bold;
     border-width: 2px;
   }
+
+
+/* Estilos para la barra superior */
+.top-bar {
+    background-color: #343a40; /* Color de fondo oscuro */
+    font-size: 0.9rem;
+}
+
+.top-bar .contact-item {
+    color: #fff;
+}
+
+.top-bar .contact-item i {
+    font-size: 1.1rem;
+}
+
+.top-bar a {
+    color: #ffc107; /* Color para los enlaces */
+    transition: color 0.3s;
+}
+
+.top-bar a:hover {
+    color: #fff; /* Color al pasar el ratón */
+}
   
 

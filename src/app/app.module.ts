@@ -13,7 +13,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,

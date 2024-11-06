@@ -1,3 +1,17 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Startes</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html> -->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,6 +20,29 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Enlace a los estilos de Cookie Consent by Osano -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+
+  <!-- Script de Cookie Consent by Osano -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener('load', function(){
+      window.cookieconsent.initialise({
+        palette: {
+          popup: { background: "#000" },
+          button: { background: "#f1d600" }
+        },
+        theme: "classic",
+        content: {
+          message: "Usamos cookies esenciales para mejorar la experiencia en nuestra web.",
+          dismiss: "Aceptar",
+          link: "Ver política de cookies",
+          href: "https://policies.google.com/technologies/cookies?hl=es"
+        }
+      });
+    });
+  </script>
 </head>
 <body>
   <app-root></app-root>

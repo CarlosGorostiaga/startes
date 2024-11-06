@@ -179,3 +179,61 @@
     z-index: 1;
 }
 
+
+/* Sección de estadísticas con fondo */
+.stats-section {
+    background-image: url('../../../assets/img/ilustracion-solar.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    max-width: 1200px; /* Ancho máximo en pantallas grandes */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px; /* Añadir un poco de padding para separar del borde */
+}
+
+@media (min-width: 992px) {
+    .stats-section {
+        height: 80vh; /* Ajustar altura en pantallas grandes si es necesario */
+        width: 60vh;
+    }
+}
+
+/* Estilos de las bolas de estadísticas */
+.stats-circle {
+    width: 150px;
+    height: 150px;
+    background: rgba(30, 172, 25, 0.425); /* Fondo semi-transparente */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    position: absolute;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* Posición de las bolas */
+.top-left {
+    top: 10%;
+    left: 5%;
+}
+
+.bottom-right {
+    bottom: 10%;
+    right: 5%;
+}
+
+/* Estilo del contador */
+.count {
+    font-size: 2.5rem;
+    margin: 0;
+}
+

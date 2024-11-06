@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { Component, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -8,6 +7,8 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  @ViewChild('statsSection', { static: true }) statsSection!: ElementRef; // Referencia a la sección de estadísticas
+  
   contact = {
     name: '',
     email: '',
@@ -18,21 +19,58 @@ export class HomeComponent {
   activeCard: 'solar' | 'charging' = 'solar';
   intervalId: any;
 
+  installationsCount = 0;
+  energySavedCount = 0;
+  installationsTarget = 150;
+  energySavedTarget = 5000;
+  countersAnimated = false; // Para verificar si la animación ya se activó
+
   constructor(private toastr: ToastrService) {}
 
 
   ngOnInit() {
     this.startCardRotation(); // Iniciar la rotación de tarjetas al cargar el componente
+    this.observeStatsSection();
   }
 
   ngOnDestroy() {
     clearInterval(this.intervalId); // Limpiar el intervalo al destruir el componente
   }
 
+  observeStatsSection() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !this.countersAnimated) {
+          this.countersAnimated = true;
+          this.startCounterAnimation();
+        }
+      });
+    }, { threshold: 0.5 }); // Activar la animación cuando el 50% de la sección es visible
+
+    observer.observe(this.statsSection.nativeElement);
+  }
+
   startCardRotation() {
     this.intervalId = setInterval(() => {
       this.activeCard = this.activeCard === 'solar' ? 'charging' : 'solar';
     }, 9000); // Cambia cada 5 segundos
+  }
+
+  startCounterAnimation() {
+    this.animateCounter('installationsCount', this.installationsTarget, 2000); // 2000 ms = 2 segundos
+    this.animateCounter('energySavedCount', this.energySavedTarget, 2000);
+  }
+
+  animateCounter(property: 'installationsCount' | 'energySavedCount', targetValue: number, duration: number) {
+    const increment = Math.ceil(targetValue / (duration / 30)); // Incremento por frame (30 ms)
+    const interval = setInterval(() => {
+      if (this[property] < targetValue) {
+        this[property] += increment;
+      } else {
+        this[property] = targetValue; // Asegurarse de que no pase el valor objetivo
+        clearInterval(interval);
+      }
+    }, 30);
   }
 
   onSubmit() {

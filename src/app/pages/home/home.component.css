@@ -43,11 +43,10 @@
   
   /* Estilos del botón */
   .btn-light {
-    background-color: none;
     color: #2a5298;
     font-weight: bold;
     padding: 0.75rem 2rem;
-    border-radius: 20px;
+    border-radius: 0px;
     transition: all 0.3s ease;
     z-index: 4; /* Aumenta para asegurar que esté encima */
     position: relative; /* Necesario para que el z-index funcione correctamente */

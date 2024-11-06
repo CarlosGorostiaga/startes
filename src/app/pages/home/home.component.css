@@ -110,16 +110,7 @@
     border-radius: 10px;
   }
   
-  /* Contenedor del formulario */
-  .form-container {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    border: solid 1px red;
-  }
-  
+
   /* Campos de entrada */
   .form-control {
     background: rgba(255, 255, 255, 0.8);
@@ -349,6 +340,78 @@
     width: 60px;
     height: 60px;
   }
+
+
+/* Sección de Consultoría */
+.consulting-section {
+  padding: 3rem 0;
+  background-color: #000;
+}
+
+.consulting-section h3 {
+  color: #ffb400;
+  font-weight: bold;
+}
+
+.consulting-section .form-container {
+  max-width: 600px; /* Limitar ancho máximo en pantallas grandes */
+  margin: 0 auto; /* Centrar el formulario horizontalmente */
+}
+
+.consulting-section .form-control-lg {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+.consulting-section .form-check-label {
+  color: #ffb400;
+}
+
+.consulting-section .btn-warning {
+  color: #000;
+  font-weight: bold;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.consulting-section .btn-warning:hover {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+form.ng-invalid {
+  border: none;
+  box-shadow: none;
+}
+
+/* Sección de Impacto */
+.impact-section {
+  background-color: #f9f9f9;
+  padding: 2rem 0;
+}
+
+.impact-section h2, .impact-section h3 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.impact-section .btn-warning {
+  color: #000;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.impact-section .btn-warning:hover {
+  background-color: #ffc107;
+  color: #fff;
+}
 
 
 

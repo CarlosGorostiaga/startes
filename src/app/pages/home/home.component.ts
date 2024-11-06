@@ -13,7 +13,8 @@ export class HomeComponent {
     name: '',
     email: '',
     phone: '',        // Nuevo campo de teléfono
-    message: ''
+    message: '',
+    terms : ''
   };
 
   activeCard: 'solar' | 'charging' = 'solar';
@@ -116,7 +117,8 @@ export class HomeComponent {
         name: '',
         email: '',
         phone: '',
-        message: ''
+        message: '',
+        terms: ''
       };
 
       // Iniciar cuenta regresiva 

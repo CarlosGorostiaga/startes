@@ -249,3 +249,30 @@
     margin: 0;
 }
 
+
+
+#about {
+    background-color: #343a40;
+    color: #fff;
+    padding: 60px 20px;
+  }
+  
+  .icon-title i {
+    font-size: 2.5rem;
+    color: #ffc107;
+  }
+  
+  .icon-title h2 {
+    font-weight: 700;
+  }
+  
+  .font-montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .btn-outline-warning {
+    font-weight: bold;
+    border-width: 2px;
+  }
+  
+

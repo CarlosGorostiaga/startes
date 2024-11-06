@@ -32,11 +32,21 @@
 </header>
 
 <!-- Hero Section -->
-<section class="hero bg-light text-center py-5">
-  <div class="container">
-    <h2 class="text-black display-4">Energía Renovable para un Futuro Sostenible</h2>
-    <p class="lead">Instalación de placas fotovoltaicas y puntos de recarga para vehículos eléctricos</p>
-    <a href="#contact" class="btn btn-primary mt-3">Contáctanos</a>
+<section class="hero-section text-center py-5 position-relative" [attr.data-card]="activeCard">
+  <div class="container position-relative text-light">
+    <!-- Tarjeta Solar -->
+    <div *ngIf="activeCard === 'solar'" class="hero-content">
+      <h2 class="display-4 animate__animated animate__fadeInDown" style="animation-delay: 0s;">Instalación y Mantenimiento de Placas Solares</h2>
+      <p class="lead animate__animated animate__fadeInUp" style="animation-delay: 1s;">Energías renovables al mejor precio en el corredor del Henares</p>
+      <a href="#contact" class="btn btn-light mt-4 animate__animated animate__fadeInUp" style="animation-delay: 2s;">Contáctanos</a>
+    </div>
+
+    <!-- Tarjeta de Recarga -->
+    <div *ngIf="activeCard === 'charging'" class="hero-content">
+      <h2 class="display-4 animate__animated animate__fadeInDown" style="animation-delay: 0s;">Puntos de Recarga para Vehículos Eléctricos</h2>
+      <p class="lead animate__animated animate__fadeInUp" style="animation-delay: 1s;">Instalación profesional para recarga en casa o en la empresa</p>
+      <a href="#contact" class="btn btn-light mt-4 animate__animated animate__fadeInUp" style="animation-delay: 2s;">Contáctanos</a>
+    </div>
   </div>
 </section>
 
@@ -72,7 +82,7 @@
 <!-- Features Section -->
 <section id="features" class="bg-light py-5">
   <div class="container">
-    <h3 class="text-center mb-5">¿Por Qué Elegir Startes?</h3>
+    <h3 class="text-center mb-5 text-black">¿Por Qué Elegir Startes?</h3>
     <div class="row">
       <!-- Feature 1 -->
       <div class="col-md-4 text-center">
@@ -99,7 +109,7 @@
 <!-- Contact Section -->
 <section id="contact" class="py-5">
   <div class="container">
-    <h3 class="text-center mb-5 text-black">Contáctanos</h3>
+    <h3 class="text-center mb-2 text-black">Contáctanos</h3>
     <div class="row justify-content-center">
       <div class="col-md-8">
         <form (ngSubmit)="onSubmit()" #contactForm="ngForm" novalidate>

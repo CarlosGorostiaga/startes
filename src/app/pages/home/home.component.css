@@ -1,17 +1,64 @@
-/* Estilos para el Hero Section */
-.hero {
-    /* background-image: url('assets/energia-renovable.jpg'); */
+/* Fondo general de la sección hero */
+.hero-section {
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
+    position: relative;
+    transition: background-image 1s ease-in-out;
   }
   
-  /* Ajuste de colores para mejor legibilidad en el hero */
-  .hero .display-4, .hero .lead {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  .hero-content {
+    position: relative;
+    z-index: 3;
   }
   
-  /* Estilos para las imágenes de las tarjetas */
+  /* Imagen de fondo para cada tarjeta */
+  .hero-section[data-card="solar"] {
+    background-image: url('../../../assets/img/solar-panel2.jpg');
+
+  }
+  
+  .hero-section[data-card="charging"] {
+    background-image: url('../../../assets/img/charging-station2.jpg');
+  }
+
+  
+  
+  /* Efecto de desenfoque para el fondo */
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  /* Estilos del botón */
+  .btn-light {
+    background-color: none;
+    color: #2a5298;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    z-index: 4; /* Aumenta para asegurar que esté encima */
+    position: relative; /* Necesario para que el z-index funcione correctamente */
+  }
+  
+  .btn-light:hover {
+    background-color: #2a5298;
+    /* color: #ffffff; */
+  }
+  
+   /* Estilos para las imágenes de las tarjetas  Secccion de tarjetas  */
   .card-img-top {
     height: 200px;
     object-fit: cover;
@@ -56,7 +103,7 @@
   }
 
 
- ************* para formulario ***************** 
+ /* ************* para formulario *****************  */
  /* Sección de fondo del formulario */
 .contact-section {
     background: linear-gradient(135deg, #4a90e2, #d94a4a);
@@ -71,12 +118,13 @@
     padding: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
+    border: solid 1px red;
   }
   
   /* Campos de entrada */
   .form-control {
     background: rgba(255, 255, 255, 0.8);
-    border: none;
+    border: solid 1px black;
     color: #333;
   }
   

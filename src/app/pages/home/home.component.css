@@ -162,3 +162,20 @@
     font-weight: 700;
   }
 
+
+/* Estilo de la capa de logo */
+.overlay-logo {
+    background-image: url('../../../assets/img/bolt-img.png');
+    background-size: 180px; /* Tamaño del logo */
+    background-repeat: no-repeat;
+    background-position: top right; /* Posición del logo */
+    opacity: 0.75; /* Ajuste de opacidad para el efecto difuminado */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite clics en los elementos debajo */
+    z-index: 1;
+}
+

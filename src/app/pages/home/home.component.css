@@ -307,4 +307,48 @@
 }
 
 
+#customer-reviews {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#customer-reviews .average-rating {
+    font-size: 1.5rem;
+}
+
+#customer-reviews .stars i {
+    font-size: 1.2rem;
+}
+
+#customer-reviews .card {
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#customer-reviews .review-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+#customer-reviews .card h5 {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+#customer-reviews .card .stars i {
+    font-size: 1rem;
+}
+
+#customer-reviews .card img {
+    border-radius: 50%;
+}
+
+/* Estilo para reducir el tamaño de las imágenes circulares */
+#customer-reviews .carousel-item img.rounded-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+
 

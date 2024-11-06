@@ -204,11 +204,20 @@
     }
 }
 
+@media (max-width: 576px) {
+    .stats-section {
+        height: 60vh; /* Aumentar un poco la altura en móviles */
+        max-width: 90%; /* Reducir el ancho para que no ocupe toda la pantalla */
+        margin-top: 20px; /* Agregar un margen superior para separar de la sección anterior */
+        padding: 15px; /* Ajustar el padding */
+    }
+}
+
 /* Estilos de las bolas de estadísticas */
 .stats-circle {
     width: 150px;
     height: 150px;
-    background: rgba(30, 172, 25, 0.425); /* Fondo semi-transparente */
+    background: rgba(4, 3, 7, 0.815); /* Fondo semi-transparente */
     border-radius: 50%;
     display: flex;
     align-items: center;

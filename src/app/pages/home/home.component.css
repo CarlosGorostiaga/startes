@@ -199,6 +199,7 @@
 
 @media (min-width: 992px) {
     .stats-section {
+        margin-top: 20px; /* Agregar un margen superior para separar de la sección anterior */
         height: 80vh; /* Ajustar altura en pantallas grandes si es necesario */
         width: 60vh;
     }

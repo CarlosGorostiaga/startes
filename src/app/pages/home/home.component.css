@@ -205,12 +205,14 @@
     }
 }
 
+
 @media (max-width: 576px) {
     .stats-section {
         height: 60vh; /* Aumentar un poco la altura en móviles */
-        max-width: 90%; /* Reducir el ancho para que no ocupe toda la pantalla */
-        margin-top: 20px; /* Agregar un margen superior para separar de la sección anterior */
-        padding: 15px; /* Ajustar el padding */
+        background-size: contain; /* Ajustar el fondo para que siempre se vea completo */
+        background-position: center; /* Centrar la imagen de fondo */
+        margin-top: 5vh;
+        border: solid 20px white;
     }
 }
 

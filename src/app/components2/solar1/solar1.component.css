@@ -1,0 +1,76 @@
+.charger-section {
+    background-image: url("../../../assets/img/placas-solares1.jpg"); /* Añade aquí la ruta a la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 100px 20px; /* Ajusta el padding según tus preferencias */
+    position: relative;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.938); /* Para mejorar la legibilidad del texto */
+    display: flex;
+    justify-content: space-between; /* Centra horizontalmente el contenido */
+  }
+  
+  .small-text {
+    color: #ffcc00; /* Color destacado para el título pequeño */
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 2rem; /* Ajusta el tamaño de la fuente principal */
+    line-height: 1.2;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem; /* Ajusta el tamaño de la fuente del subtítulo */
+    margin-top: 20px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .charger-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.623); /* Capa de oscurecimiento para mejorar el contraste del texto */
+    z-index: 1;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2; /* Coloca el contenido encima de la capa oscurecida */
+  }
+  
+  /* Ajustes para pantallas grandes */
+  @media (min-width: 992px) {
+    .charger-section {
+      background-image: url("../../../assets/img/placas-solares-desktop.jpg");
+      height: 45vh; /* Ajusta la altura para pantallas grandes */
+      display: flex;
+      align-items: center; /* Centra verticalmente el contenido */
+      justify-content: center; /* Centra horizontalmente el contenido */
+      text-align: center; /* Alinea el texto al centro */
+    }
+  
+    .small-text {
+      font-size: 1.5rem; /* Tamaño de fuente mayor en escritorio */
+      margin-bottom: 15px;
+    }
+  
+    .title {
+      font-size: 2.5rem; /* Tamaño de fuente mayor en escritorio */
+    }
+  
+    .subtitle {
+      font-size: 1.3rem; /* Tamaño de fuente mayor en escritorio */
+      margin-top: 10px;
+    }
+  }

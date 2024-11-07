@@ -1,0 +1,114 @@
+/* Estilos generales */
+body {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.timeline-section {
+  background-color: #1c1c1c;
+}
+
+/* Contenedor de la línea de tiempo */
+.timeline-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ajuste para centrar los elementos */
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: solid 1px red; */
+}
+
+/* Cada paso de la línea de tiempo */
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  width: 22%;
+  position: relative;
+  margin: 1rem;
+  /* border: solid 1px red; */
+}
+
+/* Línea horizontal entre los pasos */
+.timeline-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  right: -5rem;
+  width: 6rem;
+  height: 2px;
+  background-color: #ffcc00;
+}
+
+@media (max-width: 992px) {
+  .timeline-step:not(:last-child)::after {
+    right: -3rem;
+    width: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline-step {
+    width: 80%;
+  }
+  .timeline-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+/* Círculo numerado */
+.inner-circle {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+/* Títulos y textos */
+.timeline-content h5 {
+  color: #00ccff;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+
+
+}
+
+.timeline-content h2 {
+  color: #00ccff;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+
+
+}
+
+.timeline-content p {
+  color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+
+}

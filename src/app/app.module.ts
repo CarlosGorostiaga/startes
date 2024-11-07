@@ -22,6 +22,7 @@ import { ServiciosComponent } from './components2/servicios/servicios.component'
 import { StatsComponent } from './components2/stats/stats.component';
 import { Adjunto1Component } from './components2/adjunto1/adjunto1.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { LinealComponent } from './components2/lineal/lineal.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { FaqComponent } from './components/faq/faq.component';
     StatsComponent,
     Adjunto1Component,
     FaqComponent,
+    LinealComponent,
   ],
   imports: [
     BrowserModule,

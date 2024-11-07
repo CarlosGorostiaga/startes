@@ -1,0 +1,65 @@
+/* Estilos para la sección de servicios */
+.services-section {
+  background-color: #f8f9fa;
+  /* border: solid 1px red; */
+}
+
+/* Estilos para las tarjetas */
+.service-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo del ícono en cada tarjeta */
+.icon {
+  font-size: 2.5rem;
+  color: #ffcc00; /* Color de ícono */
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card-text {
+  color: #666;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*********** Estilos para la sección de introducción *************/
+.intro-section {
+  background-color: #f8f9fa; /* Fondo claro */
+  color: #333; /* Color del texto */
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+}
+
+.intro-subtitle {
+  color: #ff9900; /* Color destacado para el subtítulo */
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.intro-title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.intro-text {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+}

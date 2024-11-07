@@ -21,6 +21,7 @@ import { SolarComponent } from './pages/solar/solar.component';
 import { ServiciosComponent } from './components2/servicios/servicios.component';
 import { StatsComponent } from './components2/stats/stats.component';
 import { Adjunto1Component } from './components2/adjunto1/adjunto1.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { Adjunto1Component } from './components2/adjunto1/adjunto1.component';
     ServiciosComponent,
     StatsComponent,
     Adjunto1Component,
+    FaqComponent,
   ],
   imports: [
     BrowserModule,

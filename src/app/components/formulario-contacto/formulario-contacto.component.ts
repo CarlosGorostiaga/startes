@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { Component, OnInit, OnDestroy, ElementRef, ViewChild, Input } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -8,15 +9,22 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class FormularioContactoComponent {
 
+  @Input() message: string = '';
+  
+
   contact = {
     name: '',
     email: '',
     phone: '',        // Nuevo campo de teléfono
-    message: '',
+    message: this.message,
     terms : ''
   };
 
   constructor(private toastr: ToastrService) {}
+
+  ngOnChanges() {
+    this.contact.message = this.message; // Actualiza el mensaje si cambia
+  }
 
   onSubmit() {
     // Expresión regular mejorada para correos electrónicos

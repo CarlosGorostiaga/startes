@@ -14,6 +14,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { Recarga1Component } from './components/recarga1/recarga1.component';
 import { Recarga2Component } from './components/recarga2/recarga2.component';
 import { FormularioContactoComponent } from './components/formulario-contacto/formulario-contacto.component';
+import { TarjetasCargadoresComponent } from './components/tarjetas-cargadores/tarjetas-cargadores.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormularioContactoComponent } from './components/formulario-contacto/fo
     Recarga1Component,
     Recarga2Component,
     FormularioContactoComponent,
+    TarjetasCargadoresComponent,
   ],
   imports: [
     BrowserModule,

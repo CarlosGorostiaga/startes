@@ -1,0 +1,84 @@
+/* Tarjeta de cargador */
+.charger-card {
+  max-width: 350px;
+  margin: auto;
+  border: 2px solid #ffcc00; /* Borde amarillo */
+  border-radius: 15px;
+  background: #1c1c1c; /* Fondo negro */
+  color: #ffcc00; /* Texto amarillo */
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.charger-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(255, 204, 0, 0.3);
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffcc00;
+}
+
+.features {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.price {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.discounted-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffcc00; /* Precio con descuento en amarillo */
+}
+
+/* Modal */
+.modal-style {
+  background: #2b2b2b; /* Fondo oscuro */
+  color: #ffcc00; /* Texto amarillo */
+  border-radius: 15px;
+}
+
+.modal-header,
+.modal-footer {
+  background: #1c1c1c; /* Fondo aún más oscuro para el encabezado y pie */
+}
+
+.modal-title {
+  color: #ffcc00;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.specifications li {
+  font-size: 1rem;
+  color: #e0e0e0; /* Texto de especificaciones en gris claro */
+  margin-bottom: 10px;
+}
+
+.btn-outline-warning {
+  border-color: #ffcc00;
+  color: #ffcc00;
+  transition: all 0.3s;
+}
+
+.btn-outline-warning:hover {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+}
+
+.btn-primary {
+  background-color: #ffcc00;
+  border: none;
+  color: #1c1c1c;
+}
+
+.btn-primary:hover {
+  background-color: #e6b800;
+  color: #1c1c1c;
+}

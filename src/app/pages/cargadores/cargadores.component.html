@@ -10,3 +10,9 @@
 <!-- Este es una diapositiva2 -->
 <app-recarga2></app-recarga2>
 
+<!-- Estas son las tarjetas -->
+<app-tarjetas-cargadores (chargerSelected)="updateMessage($event)"></app-tarjetas-cargadores>
+
+<!-- Este es el formulario de contacto -->
+<app-formulario-contacto #contactFormSection [message]="contactMessage"></app-formulario-contacto>
+

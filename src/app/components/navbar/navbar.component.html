@@ -1,32 +1,42 @@
-<!-- Header -->
 <header class="bg-body-secondary text-black p-1 shadow">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <!-- Logo de la empresa -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="assets/img/logo-startes.png" alt="Logo de Startes" height="40" class="me-3">
-          <span class="text-black font-roboto">STARTES</span>
-        </a>
-  
-        <!-- Botón de colapso para móvil -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <!-- Enlaces de navegación -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link text-black font-roboto" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-black font-roboto" href="#services">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-black font-roboto" href="#contact">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <!-- Logo de la empresa -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/logo-startes.png" alt="Logo de Startes" height="40" class="me-3">
+        <span class="text-black font-roboto">STARTES</span>
+      </a>
+
+      <!-- Botón de colapso para móvil -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces de navegación -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-black font-roboto" href="#">Inicio</a>
+          </li>
+
+          <!-- Menú desplegable de Servicios -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-black font-roboto" href="#services" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Servicios
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/cargadores">Cargadores Eléctricos</a></li>
+              <li><a class="dropdown-item" href="/solar">Placas Fotovoltaicas</a></li>
+              <li><a class="dropdown-item" href="/servicios-electricista">Servicios de Electricista</a></li>
+              <li><a class="dropdown-item" href="/servicios-industria">Servicios para la Industria</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-black font-roboto" href="#contact">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

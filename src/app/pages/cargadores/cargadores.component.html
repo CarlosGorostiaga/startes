@@ -10,8 +10,14 @@
 <!-- Este es una diapositiva2 -->
 <app-recarga2></app-recarga2>
 
-<!-- Estas son las tarjetas -->
-<app-tarjetas-cargadores (chargerSelected)="updateMessage($event)"></app-tarjetas-cargadores>
+<!-- Contenedor para las tarjetas de cargadores -->
+<div class="container-fluid my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <app-tarjetas-cargadores (chargerSelected)="updateMessage($event)"></app-tarjetas-cargadores>
+      </div>
+    </div>
+  </div>
 
 <!-- Este es el formulario de contacto -->
 <app-formulario-contacto #contactFormSection [message]="contactMessage"></app-formulario-contacto>

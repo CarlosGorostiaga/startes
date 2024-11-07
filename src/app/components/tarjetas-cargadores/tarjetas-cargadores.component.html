@@ -1,21 +1,27 @@
-<div class="row">
-  <div class="col-md-4 mb-4" *ngFor="let cargador of cargadores">
-    <!-- Tarjeta de cargador -->
-    <div class="card charger-card text-center p-3">
-      <h5 class="card-title mb-3">{{ cargador.name }}</h5>
-      <img [src]="cargador.imageUrl" class="card-img-top rounded mb-3" [alt]="cargador.name">
-      <ul class="list-unstyled features">
-        <li *ngFor="let feature of cargador.features">🔹 {{ feature }}</li>
-      </ul>
-      <p class="price">Precio: {{ cargador.price }} €</p>
-      <p class="discounted-price">Con subvención (70%): <strong>{{ cargador.discountedPrice }} €</strong></p>
-      <button class="btn btn-outline-warning w-100 mb-2" (click)="openModal(cargador)">
-        Detalles del cargador
-      </button>
-      <button class="btn btn-primary w-100" (click)="chooseCharger(cargador)">Elegir cargador</button>
+<div class="row py-3">
+  <div class="col-md-4 mb-4 d-flex align-items-stretch" *ngFor="let cargador of cargadores">
+    <div class="card charger-card text-center p-3 d-flex flex-column">
+      <div class="card-body flex-grow-1 d-flex flex-column">
+        <h5 class="card-title mb-3">{{ cargador.name }}</h5>
+        <img [src]="cargador.imageUrl" class="card-img-top rounded mb-3" [alt]="cargador.name">
+        <ul class="list-unstyled features">
+          <li *ngFor="let feature of cargador.features">🔹 {{ feature }}</li>
+        </ul>
+        <p class="price">Precio: {{ cargador.price }} €</p>
+        <p class="discounted-price">Con subvención (70%): <strong>{{ cargador.discountedPrice }} €</strong></p>
+      </div>
+      <!-- Botones alineados al final -->
+      <div class="mt-auto">
+        <button class="btn btn-outline-warning w-100 mb-2" (click)="openModal(cargador)">
+          Detalles del cargador
+        </button>
+        <button class="btn btn-primary w-100" (click)="chooseCharger(cargador)">Elegir cargador</button>
+      </div>
     </div>
   </div>
 </div>
+
+
 
 <!-- Modal de detalles del cargador -->
 <div class="modal fade" id="chargerModal" tabindex="-1" aria-labelledby="chargerModalLabel" aria-hidden="true">

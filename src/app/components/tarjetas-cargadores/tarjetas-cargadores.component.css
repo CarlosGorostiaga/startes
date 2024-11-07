@@ -8,6 +8,7 @@
   color: #ffcc00; /* Texto amarillo */
   box-shadow: 0 8px 20px rgba(255, 204, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .charger-card:hover {
@@ -92,3 +93,6 @@
   color: #1c1c1c;
   font-family: "Montserrat", sans-serif;
 }
+
+
+

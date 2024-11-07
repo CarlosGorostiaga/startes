@@ -1,0 +1,44 @@
+/*********** Estilos para la sección de introducción *************/
+.intro-section {
+  background-color: #f8f9fa; /* Fondo claro */
+  color: #333; /* Color del texto */
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+}
+
+.intro-subtitle {
+  color: #ff9900; /* Color destacado para el subtítulo */
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.intro-title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.intro-text {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Centrado vertical y horizontal en pantallas grandes */
+@media (min-width: 992px) {
+  .intro-section {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    padding: 0; /* Elimina el padding para un centrado perfecto */
+  }
+
+  .intro-section .container-fluid {
+    max-width: 80%; /* Ancho máximo para que el texto no se estire demasiado */
+  }
+}

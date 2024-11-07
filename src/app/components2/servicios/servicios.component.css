@@ -1,0 +1,27 @@
+/* Estilo móvil por defecto (vista en columna) */
+.service-section {
+    margin-bottom: 2rem;
+    /* border: solid 1px red */
+  }
+  
+  /* Estilo horizontal para pantallas grandes */
+  @media (min-width: 992px) {
+    /* Contenedor general */
+    .services-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    /* Cada servicio como una columna */
+    .service-section {
+      flex: 1;
+      max-width: 30%; /* Ajusta el tamaño según el espacio disponible */
+      text-align: center;
+      margin: 0 10px;
+    }
+  
+    .service-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  }

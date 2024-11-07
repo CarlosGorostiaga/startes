@@ -15,6 +15,12 @@ import { Recarga1Component } from './components/recarga1/recarga1.component';
 import { Recarga2Component } from './components/recarga2/recarga2.component';
 import { FormularioContactoComponent } from './components/formulario-contacto/formulario-contacto.component';
 import { TarjetasCargadoresComponent } from './components/tarjetas-cargadores/tarjetas-cargadores.component';
+import { Solar1Component } from './components2/solar1/solar1.component';
+import { Solar2Component } from './components2/solar2/solar2.component';
+import { SolarComponent } from './pages/solar/solar.component';
+import { ServiciosComponent } from './components2/servicios/servicios.component';
+import { StatsComponent } from './components2/stats/stats.component';
+import { Adjunto1Component } from './components2/adjunto1/adjunto1.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +34,12 @@ import { TarjetasCargadoresComponent } from './components/tarjetas-cargadores/ta
     Recarga2Component,
     FormularioContactoComponent,
     TarjetasCargadoresComponent,
+    Solar1Component,
+    Solar2Component,
+    SolarComponent,
+    ServiciosComponent,
+    StatsComponent,
+    Adjunto1Component,
   ],
   imports: [
     BrowserModule,

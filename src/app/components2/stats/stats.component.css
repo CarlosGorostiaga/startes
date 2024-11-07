@@ -1,0 +1,58 @@
+.stats-section {
+    background-image: url("../../../assets/img/ilustracion-solar.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  @media (min-width: 992px) {
+    .stats-section {
+      margin-top: 20px;
+      height: 80vh;
+      width: 60vh;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .stats-section {
+      height: 60vh;
+      background-size: contain;
+      background-position: center;
+      margin-top: 5vh;
+      border: solid 20px white;
+    }
+  }
+  
+  .stats-circle {
+    width: 150px;
+    height: 150px;
+    background: rgba(4, 3, 7, 0.815);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    position: absolute;
+    padding: 15px;
+    font-weight: bold;
+  }
+  
+  .top-left {
+    top: 10%;
+    left: 5%;
+  }
+  
+  .bottom-right {
+    bottom: 10%;
+    right: 5%;
+  }

@@ -1,0 +1,19 @@
+<div class="services-container">
+  <section *ngFor="let servicio of servicios" class="service-section py-4">
+    <div class="container">
+      <!-- Título -->
+      <h2 class="service-title font-montserrat" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif; font-weight: 800;">
+        {{ servicio.titulo }}
+      </h2>
+      <div class="title-divider"></div>
+      
+      <!-- Texto descriptivo -->
+      <p class="service-description font-montserrat" style="font-size: 1.1rem; font-family: 'Montserrat', sans-serif; font-weight: 300;" [innerHTML]="servicio.descripcion"></p>
+      
+      <!-- Imagen -->
+      <div class="service-image">
+        <img [src]="servicio.imagen" [alt]="servicio.alt" class="img-fluid">
+      </div>
+    </div>
+  </section>
+</div>

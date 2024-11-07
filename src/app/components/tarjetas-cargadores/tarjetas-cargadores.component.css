@@ -17,24 +17,28 @@
 
 .card-title {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #ffcc00;
+  font-family: "Montserrat", sans-serif;
 }
 
 .features {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .price {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .discounted-price {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #ffcc00; /* Precio con descuento en amarillo */
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Modal */
@@ -65,20 +69,24 @@
   border-color: #ffcc00;
   color: #ffcc00;
   transition: all 0.3s;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn-outline-warning:hover {
   background-color: #ffcc00;
   color: #1c1c1c;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn-primary {
   background-color: #ffcc00;
   border: none;
   color: #1c1c1c;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn-primary:hover {
   background-color: #e6b800;
   color: #1c1c1c;
+  font-family: "Montserrat", sans-serif;
 }

@@ -1,0 +1,75 @@
+/* Sección de Consultoría */
+.consulting-section {
+  padding: 3rem 0;
+  background-color: #000;
+}
+
+.consulting-section h3 {
+  color: #ffb400;
+  font-weight: bold;
+}
+
+.consulting-section .form-container {
+  max-width: 600px; /* Limitar ancho máximo en pantallas grandes */
+  margin: 0 auto; /* Centrar el formulario horizontalmente */
+}
+
+.consulting-section .form-control-lg {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+.consulting-section .form-check-label {
+  color: #ffb400;
+}
+
+.consulting-section .btn-warning {
+  color: #000;
+  font-weight: bold;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.consulting-section .btn-warning:hover {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+form.ng-invalid {
+  border: none;
+  box-shadow: none;
+}
+
+/* Campos de entrada */
+.form-control {
+  background: rgba(255, 255, 255, 0.8);
+  border: solid 1px black;
+  color: #333;
+}
+
+.form-control::placeholder {
+  color: #666;
+}
+
+/* Estilos de etiquetas */
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Estilos del botón */
+.btn-light {
+  background-color: #fff;
+  color: #4a90e2;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #4a90e2;
+  color: #fff;
+}

@@ -12,6 +12,8 @@ import { CargadoresComponent } from './pages/cargadores/cargadores.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { Recarga1Component } from './components/recarga1/recarga1.component';
+import { Recarga2Component } from './components/recarga2/recarga2.component';
+import { FormularioContactoComponent } from './components/formulario-contacto/formulario-contacto.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { Recarga1Component } from './components/recarga1/recarga1.component';
     TopBarComponent,
     NavbarComponent,
     Recarga1Component,
+    Recarga2Component,
+    FormularioContactoComponent,
   ],
   imports: [
     BrowserModule,

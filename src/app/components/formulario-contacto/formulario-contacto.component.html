@@ -1,0 +1,29 @@
+<!-- Sección de Consultoría -->
+<section class="consulting-section py-3 text-white" style="background-color: #000;">
+    <div class="container text-center">
+      <h3 class="mb-4">Solicita tu consultoría gratuita ahora y descubre el poder del sol</h3>
+      <div class="form-container">
+        <form (ngSubmit)="onSubmit()" #consultingForm="ngForm" novalidate>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Tu nombre" [(ngModel)]="contact.name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <input type="tel" class="form-control form-control-lg" placeholder="Teléfono" [(ngModel)]="contact.phone" name="phone" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control form-control-lg" placeholder="Tu email" [(ngModel)]="contact.email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control form-control-lg" rows="3" placeholder="Dinos qué necesitas" [(ngModel)]="contact.message" name="message" required></textarea>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="contact.terms" name="terms" required>
+            <label class="form-check-label">
+              Acepto los términos y condiciones y la política de privacidad de Startes.
+            </label>
+          </div>
+          <button type="submit" class="btn btn-warning btn-lg w-100" style="border-radius: 50px;">CONSULTORÍA GRATUITA</button>
+        </form>
+      </div>
+    </div>
+  </section>

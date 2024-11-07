@@ -7,6 +7,8 @@
   padding: 100px 20px; /* Ajusta el padding según tus preferencias */
   position: relative;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Para mejorar la legibilidad del texto */
+  display: flex;
+  justify-content: space-between; /* Centra horizontalmente el contenido */
 }
 
 .small-text {
@@ -54,26 +56,26 @@
 
 /* Ajustes para pantallas grandes */
 @media (min-width: 992px) {
-    .charger-section {
-      background-image: url("../../../assets/img/estacion-electrica-desktop.jpg");
-      height: 45vh; /* Ajusta la altura para pantallas grandes */
-      display: flex;
-      align-items: center; /* Centra verticalmente el contenido */
-      justify-content: center; /* Centra horizontalmente el contenido */
-      text-align: center; /* Alinea el texto al centro */
-    }
-  
-    .small-text {
-      font-size: 1.5rem; /* Tamaño de fuente mayor en escritorio */
-      margin-bottom: 15px;
-    }
-  
-    .title {
-      font-size: 2.5rem; /* Tamaño de fuente mayor en escritorio */
-    }
-  
-    .subtitle {
-      font-size: 1.3rem; /* Tamaño de fuente mayor en escritorio */
-      margin-top: 10px;
-    }
+  .charger-section {
+    background-image: url("../../../assets/img/estacion-electrica-desktop.jpg");
+    height: 45vh; /* Ajusta la altura para pantallas grandes */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Alinea el texto al centro */
   }
+
+  .small-text {
+    font-size: 1.5rem; /* Tamaño de fuente mayor en escritorio */
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 2.5rem; /* Tamaño de fuente mayor en escritorio */
+  }
+
+  .subtitle {
+    font-size: 1.3rem; /* Tamaño de fuente mayor en escritorio */
+    margin-top: 10px;
+  }
+}

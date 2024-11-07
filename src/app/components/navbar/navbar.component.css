@@ -1,0 +1,29 @@
+/* Aplicar Roboto a los elementos con la clase 'font-roboto' */
+.font-roboto {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  /* Opcional: Personalizar estilos */
+  .font-roboto {
+    font-weight: 700;
+  }
+  
+  nav .font-roboto {
+    font-weight: 550;
+  }
+  
+  /* Ajuste de tamaño para el logo */
+  .navbar-brand img {
+    height: 60px; /* Ajusta el tamaño del logo según prefieras */
+  }
+  
+  /* Ajuste de fuente y color para enlaces en el header */
+  .navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  /* Opcional: Cambia el color de fondo al pasar el cursor */
+  .navbar-nav .nav-link:hover {
+    color: #ffc107; /* Ejemplo: cambia el color de los enlaces al pasar el cursor */
+  }

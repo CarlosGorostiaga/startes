@@ -1,346 +1,273 @@
 /* Fondo general de la sección hero */
 .hero-section {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    position: relative;
-    transition: background-image 1s ease-in-out;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 3;
-  }
-  
-  /* Imagen de fondo para cada tarjeta */
-  .hero-section[data-card="solar"] {
-    background-image: url('../../../assets/img/solar-panel2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  transition: background-image 1s ease-in-out;
+}
 
-  }
-  
-  .hero-section[data-card="charging"] {
-    background-image: url('../../../assets/img/charging-station2.jpg');
-  }
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
 
-  
-  
-  /* Efecto de desenfoque para el fondo */
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-  
-  /* Estilos del botón */
-  .btn-light {
-    color: #2a5298;
-    font-weight: bold;
-    padding: 0.75rem 2rem;
-    border-radius: 0px;
-    transition: all 0.3s ease;
-    z-index: 4; /* Aumenta para asegurar que esté encima */
-    position: relative; /* Necesario para que el z-index funcione correctamente */
-  }
-  
-  .btn-light:hover {
-    background-color: #2a5298;
-    /* color: #ffffff; */
-  }
-  
-   /* Estilos para las imágenes de las tarjetas  Secccion de tarjetas  */
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  /* Estilos para los íconos */
-  .bi {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
+/* Imagen de fondo para cada tarjeta */
+.hero-section[data-card="solar"] {
+  background-image: url("../../../assets/img/solar-panel2.jpg");
+}
+
+.hero-section[data-card="charging"] {
+  background-image: url("../../../assets/img/charging-station2.jpg");
+}
+
+/* Efecto de desenfoque para el fondo */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Estilos del botón */
+.btn-light {
+  color: #2a5298;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 0px;
+  transition: all 0.3s ease;
+  z-index: 4; /* Aumenta para asegurar que esté encima */
+  position: relative; /* Necesario para que el z-index funcione correctamente */
+}
+
+.btn-light:hover {
+  background-color: #2a5298;
+  /* color: #ffffff; */
+}
+
+/* Estilos para las imágenes de las tarjetas  Secccion de tarjetas  */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Estilos para los íconos */
+.bi {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
 
-  /* Aplicar Roboto a los elementos con la clase 'font-roboto' */
-.font-roboto {
-    font-family: "Montserrat", sans-serif;
-  }
-  
-  /* Opcional: Personalizar estilos */
-  .font-roboto {
-    font-weight: 700;
-  }
-  
-  nav .font-roboto {
-    font-weight: 550;
-  }
 
-
-/* Ajuste de tamaño para el logo */
-.navbar-brand img {
-    height: 60px; /* Ajusta el tamaño del logo según prefieras */
-  }
-  
-  /* Ajuste de fuente y color para enlaces en el header */
-  .navbar-nav .nav-link {
-    font-weight: 500;
-    font-size: 1rem;
-  }
-  
-  /* Opcional: Cambia el color de fondo al pasar el cursor */
-  .navbar-nav .nav-link:hover {
-    color: #ffc107; /* Ejemplo: cambia el color de los enlaces al pasar el cursor */
-  }
-
-
- /* ************* para formulario *****************  */
- /* Sección de fondo del formulario */
+/* ************* para formulario *****************  */
+/* Sección de fondo del formulario */
 .contact-section {
-    background: linear-gradient(135deg, #4a90e2, #d94a4a);
-    padding: 4rem 0;
-    border-radius: 10px;
-  }
-  
+  background: linear-gradient(135deg, #4a90e2, #d94a4a);
+  padding: 4rem 0;
+  border-radius: 10px;
+}
 
-  /* Campos de entrada */
-  .form-control {
-    background: rgba(255, 255, 255, 0.8);
-    border: solid 1px black;
-    color: #333;
-  }
-  
-  .form-control::placeholder {
-    color: #666;
-  }
-  
-  /* Estilos de etiquetas */
-  .form-label {
-    font-weight: 600;
-    font-size: 0.9rem;
-  }
-  
-  /* Estilos del botón */
-  .btn-light {
-    background-color: #fff;
-    color: #4a90e2;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-light:hover {
-    background-color: #4a90e2;
-    color: #fff;
-  }
-  
-  /* Estilo de mensajes de error */
-  .text-danger {
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-  
-  /* Tamaño y estilo de título */
-  h3 {
-    color: #ffffff;
-    font-weight: 700;
-  }
+/* Campos de entrada */
+.form-control {
+  background: rgba(255, 255, 255, 0.8);
+  border: solid 1px black;
+  color: #333;
+}
 
+.form-control::placeholder {
+  color: #666;
+}
+
+/* Estilos de etiquetas */
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Estilos del botón */
+.btn-light {
+  background-color: #fff;
+  color: #4a90e2;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+/* Estilo de mensajes de error */
+.text-danger {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Tamaño y estilo de título */
+h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
 
 /* Estilo de la capa de logo */
 .overlay-logo {
-    background-image: url('../../../assets/img/bolt-img.png');
-    background-size: 180px; /* Tamaño del logo */
-    background-repeat: no-repeat;
-    background-position: top right; /* Posición del logo */
-    opacity: 0.75; /* Ajuste de opacidad para el efecto difuminado */
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Permite clics en los elementos debajo */
-    z-index: 1;
+  background-image: url("../../../assets/img/bolt-img.png");
+  background-size: 180px; /* Tamaño del logo */
+  background-repeat: no-repeat;
+  background-position: top right; /* Posición del logo */
+  opacity: 0.75; /* Ajuste de opacidad para el efecto difuminado */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Permite clics en los elementos debajo */
+  z-index: 1;
 }
-
 
 /* Sección de estadísticas con fondo */
 .stats-section {
-    background-image: url('../../../assets/img/ilustracion-solar.png'); /* Imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 50vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    max-width: 1200px; /* Ancho máximo en pantallas grandes */
-    margin: 0 auto; /* Centrar horizontalmente */
-    padding: 20px; /* Añadir un poco de padding para separar del borde */
+  background-image: url("../../../assets/img/ilustracion-solar.png"); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  max-width: 1200px; /* Ancho máximo en pantallas grandes */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 20px; /* Añadir un poco de padding para separar del borde */
 }
 
 @media (min-width: 992px) {
-    .stats-section {
-        margin-top: 20px; /* Agregar un margen superior para separar de la sección anterior */
-        height: 80vh; /* Ajustar altura en pantallas grandes si es necesario */
-        width: 60vh;
-    }
+  .stats-section {
+    margin-top: 20px; /* Agregar un margen superior para separar de la sección anterior */
+    height: 80vh; /* Ajustar altura en pantallas grandes si es necesario */
+    width: 60vh;
+  }
 }
 
-
 @media (max-width: 576px) {
-    .stats-section {
-        height: 60vh; /* Aumentar un poco la altura en móviles */
-        background-size: contain; /* Ajustar el fondo para que siempre se vea completo */
-        background-position: center; /* Centrar la imagen de fondo */
-        margin-top: 5vh;
-        border: solid 20px white;
-    }
+  .stats-section {
+    height: 60vh; /* Aumentar un poco la altura en móviles */
+    background-size: contain; /* Ajustar el fondo para que siempre se vea completo */
+    background-position: center; /* Centrar la imagen de fondo */
+    margin-top: 5vh;
+    border: solid 20px white;
+  }
 }
 
 /* Estilos de las bolas de estadísticas */
 .stats-circle {
-    width: 150px;
-    height: 150px;
-    background: rgba(4, 3, 7, 0.815); /* Fondo semi-transparente */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #fff;
-    position: absolute;
-    padding: 15px;
-    font-weight: bold;
+  width: 150px;
+  height: 150px;
+  background: rgba(4, 3, 7, 0.815); /* Fondo semi-transparente */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  position: absolute;
+  padding: 15px;
+  font-weight: bold;
 }
 
 /* Posición de las bolas */
 .top-left {
-    top: 10%;
-    left: 5%;
+  top: 10%;
+  left: 5%;
 }
 
 .bottom-right {
-    bottom: 10%;
-    right: 5%;
+  bottom: 10%;
+  right: 5%;
 }
 
 /* Estilo del contador */
 .count {
-    font-size: 2.5rem;
-    margin: 0;
+  font-size: 2.5rem;
+  margin: 0;
 }
-
-
 
 #about {
-    background-color: #343a40;
-    color: #fff;
-    padding: 60px 20px;
-  }
-  
-  .icon-title i {
-    font-size: 2.5rem;
-    color: #ffc107;
-  }
-  
-  .icon-title h2 {
-    font-weight: 700;
-  }
-  
-  .font-montserrat {
-    font-family: "Montserrat", sans-serif;
-  }
-  
-  .btn-outline-warning {
-    font-weight: bold;
-    border-width: 2px;
-  }
-
-
-/* Estilos para la barra superior */
-.top-bar {
-    background-color: #343a40; /* Color de fondo oscuro */
-    font-size: 0.9rem;
-    color: #fff;
+  background-color: #343a40;
+  color: #fff;
+  padding: 60px 20px;
 }
 
-.top-bar .contact-item {
-    color: #fff;
-    display: flex;
-    align-items: center; /* Alineación central */
+.icon-title i {
+  font-size: 2.5rem;
+  color: #ffc107;
 }
 
-.top-bar .contact-item i {
-    font-size: 1rem; /* Tamaño del icono */
-    line-height: 1; /* Asegura la alineación vertical */
-    vertical-align: middle; /* Centrado del icono */
+.icon-title h2 {
+  font-weight: 700;
 }
 
-.top-bar a {
-    color: #ffc107; /* Color para los enlaces */
-    transition: color 0.3s;
-    font-size: 0.9rem; /* Asegura que el tamaño de texto sea igual al de la barra */
-    line-height: 1; /* Asegura alineación vertical */
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
 }
 
-.top-bar a:hover {
-    color: #fff; /* Color al pasar el ratón */
+.btn-outline-warning {
+  font-weight: bold;
+  border-width: 2px;
 }
-
 
 #customer-reviews {
-    background-color: #f9f9f9;
-    color: #333;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 #customer-reviews .average-rating {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 #customer-reviews .stars i {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 #customer-reviews .card {
-    border: none;
-    border-radius: 10px;
-    background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 
 #customer-reviews .review-text {
-    font-size: 0.95rem;
-    color: #555;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 #customer-reviews .card h5 {
-    margin-bottom: 0;
-    font-size: 1rem;
+  margin-bottom: 0;
+  font-size: 1rem;
 }
 
 #customer-reviews .card .stars i {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 #customer-reviews .card img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 /* Estilo para reducir el tamaño de las imágenes circulares */
 #customer-reviews .carousel-item img.rounded-circle {
-    width: 60px;
-    height: 60px;
-  }
-
+  width: 60px;
+  height: 60px;
+}
 
 /* Sección de Consultoría */
 .consulting-section {
@@ -394,7 +321,8 @@ form.ng-invalid {
   padding: 2rem 0;
 }
 
-.impact-section h2, .impact-section h3 {
+.impact-section h2,
+.impact-section h3 {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
@@ -412,6 +340,3 @@ form.ng-invalid {
   background-color: #ffc107;
   color: #fff;
 }
-
-
-

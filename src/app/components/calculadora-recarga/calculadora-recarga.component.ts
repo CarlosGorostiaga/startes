@@ -3,11 +3,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-calculadora-recarga',
   templateUrl: './calculadora-recarga.component.html',
-  styleUrls: ['./calculadora-recarga.component.css']
+  styleUrls: ['./calculadora-recarga.component.css'],
 })
 export class CalculadoraRecargaComponent {
   currentStep = 0; // Comenzamos en el paso 0
-  totalSteps = 5;  // Número total de pasos
+  totalSteps = 5; // Número total de pasos
 
   // Variables para almacenar las respuestas
   postalCode: string = '';
@@ -93,13 +93,13 @@ Por favor, contáctame para más detalles.`;
     this.priceAdjustment = 0;
   }
 
-    // Función para desplazarse al formulario de contacto
-    scrollToForm() {
-      setTimeout(() => {
-        const element = document.getElementById('contactForm');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
+  // Función para desplazarse al formulario de contacto
+  scrollToForm() {
+    setTimeout(() => {
+      const element = document.getElementById('contactForm');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 5000);
+  }
 }

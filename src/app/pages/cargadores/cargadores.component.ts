@@ -24,6 +24,6 @@ export class CargadoresComponent implements AfterViewInit {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    }, 100); // Agrega un retraso para asegurar que el formulario esté en el DOM
+    }, 1000); // Agrega un retraso para asegurar que el formulario esté en el DOM
   }
 }

@@ -27,6 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { CalculadoraRecargaComponent } from './components/calculadora-recarga/calculadora-recarga.component';
 import { AboutComponent } from './components/about/about.component';
+import { FeaturesComponent } from './components/features/features.component';
+import { ConjuntosServiciosComponent } from './components/conjuntos-servicios/conjuntos-servicios.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { AboutComponent } from './components/about/about.component';
     SliderComponent,
     CalculadoraRecargaComponent,
     AboutComponent,
+    FeaturesComponent,
+    ConjuntosServiciosComponent,
   ],
   imports: [
     BrowserModule,

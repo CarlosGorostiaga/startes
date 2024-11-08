@@ -1,0 +1,38 @@
+.services-section {
+    background-color: #f8f9fa;
+  }
+  
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .service-card .card-title {
+    color: #ffcc00;
+    font-weight: bold;
+  }
+  
+  .service-card .card-text {
+    color: #666;
+  }
+  
+  .btn-warning {
+    background-color: #ffcc00;
+    color: #1c1c1c;
+    border: none;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e6b800;
+    color: #1c1c1c;
+  }
+  

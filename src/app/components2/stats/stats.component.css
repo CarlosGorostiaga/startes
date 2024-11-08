@@ -1,58 +1,108 @@
 .stats-section {
-    background-image: url("../../../assets/img/ilustracion-solar.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("../../../assets/img/renovables2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (min-width: 992px) {
+  .stats-section {
+    height: 55vh; /* Ajuste a 55vh para evitar una altura demasiado grande */
+    max-height: 700px; /* Limita la altura máxima en pantallas grandes */
+    background-size: contain; /* Usa contain para mantener la proporción de la imagen */
+  }
+}
+
+/* Media query intermedia para pantallas medianas (768px - 992px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .stats-section {
     height: 50vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  @media (min-width: 992px) {
-    .stats-section {
-      margin-top: 20px;
-      height: 80vh;
-      width: 60vh;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .stats-section {
-      height: 60vh;
-      background-size: contain;
-      background-position: center;
-      margin-top: 5vh;
-      border: solid 20px white;
-    }
+    background-size: contain;
+    background-position: center;
   }
   
   .stats-circle {
     width: 150px;
     height: 150px;
-    background: rgba(4, 3, 7, 0.815);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #fff;
-    position: absolute;
-    padding: 15px;
-    font-weight: bold;
   }
-  
-  .top-left {
-    top: 10%;
-    left: 5%;
+
+  .stats-circle h2 {
+    font-size: 1.5rem; /* Tamaño de fuente en pantallas medianas */
   }
-  
-  .bottom-right {
-    bottom: 10%;
-    right: 5%;
+
+  .stats-circle p {
+    font-size: 1.1rem; /* Tamaño de fuente en pantallas medianas */
   }
+}
+
+@media (max-width: 576px) {
+  .stats-section {
+    height: 60vh;
+    background-size: contain;
+    background-position: center;
+    margin-top: 5vh;
+    border: solid 20px white;
+  }
+}
+
+.stats-circle {
+  width: 120px;
+  height: 120px;
+  background: rgba(4, 3, 7, 0.815);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  position: absolute;
+  padding: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.stats-circle h2 {
+  font-size: 1.2rem; /* Tamaño de fuente para dispositivos móviles */
+  margin: 0;
+  color: #ffcc00 ;
+}
+
+.stats-circle p {
+  font-size: 0.9rem; /* Tamaño de fuente para dispositivos móviles */
+  margin: 0;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+  .stats-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .stats-circle h2 {
+    font-size: 1.8rem; /* Tamaño de fuente en pantallas grandes */
+  }
+
+  .stats-circle p {
+    font-size: 1.3rem; /* Tamaño de fuente en pantallas grandes */
+  }
+}
+
+.top-left {
+  top: 10%;
+  left: 5%;
+}
+
+.bottom-right {
+  bottom: 10%;
+  right: 5%;
+}

@@ -23,6 +23,7 @@ import { StatsComponent } from './components2/stats/stats.component';
 import { Adjunto1Component } from './components2/adjunto1/adjunto1.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { LinealComponent } from './components2/lineal/lineal.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { LinealComponent } from './components2/lineal/lineal.component';
     Adjunto1Component,
     FaqComponent,
     LinealComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

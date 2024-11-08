@@ -26,6 +26,7 @@ import { LinealComponent } from './components2/lineal/lineal.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { CalculadoraRecargaComponent } from './components/calculadora-recarga/calculadora-recarga.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { CalculadoraRecargaComponent } from './components/calculadora-recarga/ca
     FooterComponent,
     SliderComponent,
     CalculadoraRecargaComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

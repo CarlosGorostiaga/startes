@@ -5,38 +5,21 @@
 <app-navbar></app-navbar>
 
 
+<!-- Section Slider Inicio -->
+<app-slider></app-slider>
 
 <!-- Sección de Impacto -->
-<section class="impact-section text-center py-5">
+<section class="impact-section text-center py-5" style="font-family: 'Montserrat', 'sans-serif';">
   <div class="container">
-    <h2 class="display-5 fw-bold" style="color: #ffb400;">No es magia, es tecnología.</h2>
-    <h3 class="display-6" style="color: #ffb400;">Reducimos tu factura de luz en un <span style="text-decoration: underline;">92%</span> con nuestras placas solares.</h3>
-    <p class="lead text-dark">¡Luis y Alicia ya lo han conseguido, ahora te toca a ti!</p>
-    <a href="#contact" class="btn btn-warning btn-lg mt-3" style="border-radius: 50px;">QUIERO REDUCIR MI FACTURA DE LA LUZ</a>
+    <h2 class="display-5 fw-bold" style="color: #ffb400;">La energía está en tu tejado</h2>
+    <h3 class="display-6" style="color: #ffb400;">Reduce tu factura hasta un <span style="text-decoration: underline;">95%</span> con energía solar.</h3>
+    <p class="lead text-dark">¡Javier y Ana ya están ahorrando! ¿Y tú?</p>
+    <a href="#contact" class="btn btn-warning btn-lg mt-3" style="border-radius: 50px;">QUIERO AHORRAR ENERGÍA</a>
   </div>
 </section>
 
 <!-- Sección de Consultoría -->
 <app-formulario-contacto></app-formulario-contacto>
-
-<!-- Hero Section -->
-<section class="hero-section text-center py-5 position-relative" [attr.data-card]="activeCard">
-  <div class="container position-relative text-light">
-    <!-- Tarjeta Solar -->
-    <div *ngIf="activeCard === 'solar'" class="hero-content">
-      <h2 class="display-4 animate__animated animate__fadeInDown font-roboto" style="font-size: 2rem; animation-delay: 0s;">Instalación y Mantenimiento de Placas Solares en el Corredor del Henares</h2>
-      <p class="lead animate__animated animate__fadeInUp font-roboto" style="font-size: 1rem; animation-delay: 1s;">Energía solar fotovoltaica al mejor precio para ahorrar en tu factura</p>
-      <a href="#contact" class="btn btn-light mt-4 animate__animated animate__fadeInUp" style="animation-delay: 2s;">Contáctanos</a>
-    </div>
-
-    <!-- Tarjeta de Recarga -->
-    <div *ngIf="activeCard === 'charging'" class="hero-content">
-      <h2 class="display-4 animate__animated animate__fadeInDown font-roboto" style="font-size: 2rem; animation-delay: 0s;">Instalación de Puntos de Recarga para Vehículos Eléctricos en el Corredor del Henares</h2>
-      <p class="lead animate__animated animate__fadeInUp font-roboto" style="font-size: 1rem; animation-delay: 1s;">Cargadores eléctricos profesionales para hogares y empresas</p>
-      <a href="#contact" class="btn btn-light mt-4 animate__animated animate__fadeInUp" style="animation-delay: 2s;">Contáctanos</a>
-    </div>
-  </div>
-</section>
 
 <!-- About Section -->
 <section id="about" class="py-5 text-center text-black" style="background-color: #e8e8e9;">

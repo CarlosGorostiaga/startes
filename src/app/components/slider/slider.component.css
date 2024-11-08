@@ -1,0 +1,68 @@
+/* Fondo general de la sección hero */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Para mejorar la legibilidad del texto */
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Imagen de fondo para cada tarjeta */
+  .hero-section[data-card="solar"] {
+    background-image: url("../../../assets/img/solar-panel2.jpg");
+  }
+  
+  .hero-section[data-card="charging"] {
+    background-image: url("../../../assets/img/charging-station2.jpg");
+  }
+  
+  /* Capa de oscurecimiento */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  /* Estilos de contenido */
+  .hero-content {
+    z-index: 3;
+    text-align: center;
+    font-family: 'Montserrat', 'sans-serif';
+  }
+  
+  .hero-content h2 {
+    font-size: 1.8rem;
+    color: #ffb400;
+    font-weight: 600;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+  }
+  
+  @media (min-width: 992px) {
+    /* Ajustes específicos para hero-content en pantallas grandes */
+    .hero-content h2 {
+      font-size: 3rem;
+    }
+  
+    .hero-content p {
+      font-size: 1.7rem;
+    }
+  
+    .hero-content {
+      height: 30vh;
+    }
+  }

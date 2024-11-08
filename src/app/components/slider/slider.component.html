@@ -1,0 +1,18 @@
+<!-- Hero Section -->
+<section class="hero-section text-center position-relative" [attr.data-card]="activeCard">
+    <div class="container position-relative text-light d-flex flex-column justify-content-between align-items-center">
+      <!-- Tarjeta Solar -->
+      <div *ngIf="activeCard === 'solar'" class="hero-content d-flex flex-column justify-content-between align-items-center">
+        <h2 class="display-4 animate__animated animate__fadeInDown">Instalación y Mantenimiento de Placas Solares en el Corredor del Henares</h2>
+        <p class="lead animate__animated animate__fadeInUp">Energía solar fotovoltaica al mejor precio para ahorrar en tu factura</p>
+        <a href="#contact" class="btn btn-warning btn-lg mt-3 animate__animated animate__fadeInUp" style="animation-delay: 1s;">Contáctanos</a>
+      </div>
+  
+      <!-- Tarjeta de Recarga -->
+      <div *ngIf="activeCard === 'charging'" class="hero-content d-flex flex-column justify-content-between align-items-center">
+        <h2 class="display-4 animate__animated animate__fadeInDown">Instalación de Puntos de Recarga para Vehículos Eléctricos en el Corredor del Henares</h2>
+        <p class="lead animate__animated animate__fadeInUp">Cargadores eléctricos profesionales para hogares y empresas</p>
+        <a href="#contact" class="btn btn-warning btn-lg mt-3 animate__animated animate__fadeInUp" style="animation-delay: 1s;">Contáctanos</a>
+      </div>
+    </div>
+  </section>

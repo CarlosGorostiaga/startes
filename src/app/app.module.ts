@@ -29,6 +29,7 @@ import { CalculadoraRecargaComponent } from './components/calculadora-recarga/ca
 import { AboutComponent } from './components/about/about.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { ConjuntosServiciosComponent } from './components/conjuntos-servicios/conjuntos-servicios.component';
+import { FinancingoptionsComponent } from './components2/financingoptions/financingoptions.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ConjuntosServiciosComponent } from './components/conjuntos-servicios/co
     AboutComponent,
     FeaturesComponent,
     ConjuntosServiciosComponent,
+    FinancingoptionsComponent,
   ],
   imports: [
     BrowserModule,

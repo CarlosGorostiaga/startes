@@ -1,5 +1,6 @@
 // cargadores.component.ts
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit  } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-cargadores',
@@ -8,6 +9,17 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class CargadoresComponent implements AfterViewInit {
   contactMessage: string = '';
+
+  constructor(private meta: Meta, private titleService: Title) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Cargadores de Vehículos Eléctricos - Start Electrical Solutions');
+    this.meta.addTags([
+      { name: 'description', content: 'Ofrecemos cargadores de vehículos eléctricos profesionales para hogares y empresas. Con Start Electrical Solutions, disfruta de una instalación rápida, segura y eficiente.' },
+      { name: 'keywords', content: 'cargadores de vehículos eléctricos, instalación de cargadores, cargadores para coche eléctrico, Start Electrical Solutions' },
+      { name: 'robots', content: 'index, follow' }
+    ]);
+  }
 
   ngAfterViewInit() {
     // No es necesario hacer nada aquí en este caso

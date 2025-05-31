@@ -1,0 +1,97 @@
+/* ========================= */
+/* Estilos para “contact-section” */
+/* ========================= */
+.contact-section {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+
+/* Wrapper del formulario: bordes redondeados y sombra ligera */
+.contact-section .form-wrapper {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Campos de formulario con solo subrayado */
+.contact-section .input-underline {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  color: #333;
+  transition: border-color 0.3s ease;
+  /* Quitar borde azul al enfocarse */
+  box-shadow: none;
+}
+
+.contact-section .input-underline:focus {
+  outline: none;
+  border-bottom-color: #f4c300; /* subrayado en amarillo */
+  box-shadow: none;
+}
+
+/* Placeholder en gris oscuro */
+.contact-section .input-underline::placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+/* Eliminar borde azul del checkbox al enfocar */
+.contact-section .form-check-input:focus {
+  box-shadow: none;
+}
+
+/* Texto del checkbox en negro */
+.contact-section .form-check-label {
+  color: #333;
+}
+
+/* Enlaces dentro del formulario */
+.contact-section a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Títulos y párrafos en la parte izquierda */
+.contact-section h2,
+.contact-section p.lead {
+  color: #ffffff;
+}
+
+/* Estilo personalizado para el botón */
+.contact-section .custom-btn {
+  border: none;
+  background-color: #f4c300; /* amarillo */
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section .custom-btn:hover {
+  background-color: #e0b500; /* tono ligeramente más oscuro al pasar */
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section .custom-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Adaptaciones responsive */
+@media (max-width: 992px) {
+  .contact-section {
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+

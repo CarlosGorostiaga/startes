@@ -1,0 +1,143 @@
+<!-- Sección “Contacta con nosotros” mejorada -->
+<section
+  id="contactForm"
+  class="contact-section py-5"
+  style="
+    position: relative;
+    background-image: url('https://res.cloudinary.com/djlp5cdsx/image/upload/v1748714207/familia_yiibev.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;
+  "
+>
+  <!-- Overlay oscuro semitransparente para mejorar legibilidad -->
+  <div
+    class="overlay"
+    style="
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    "
+  ></div>
+
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="row align-items-center">
+      <!-- Columna izquierda: texto descriptivo -->
+      <div class="col-lg-6 mb-4 mb-lg-0 text-white">
+        <!-- Título en amarillo -->
+        <h2 class="fw-bold mb-3" style="color: #f4c300;">
+          Solicita tu consultoría gratuita <strong>ahora</strong>
+        </h2>
+        <p class="lead">
+          Tanto si tienes dudas sobre nuestros cargadores eléctricos como si quieres
+          solicitar un presupuesto personalizado para tu vivienda, escríbenos y te
+          responderemos en menos de 24 horas. ¡Estamos a tu disposición!
+        </p>
+      </div>
+
+      <!-- Columna derecha: formulario con fondo semitransparente -->
+      <div class="col-lg-6">
+        <div
+          class="form-wrapper p-4 p-md-5 rounded-3"
+          style="background-color: rgba(255, 255, 255, 0.85);"
+        >
+          <form (ngSubmit)="onSubmit()" #consultingForm="ngForm" novalidate>
+            <!-- Nombre completo -->
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control input-underline"
+                id="inputName"
+                name="name"
+                placeholder="Nombre y apellidos*"
+                [(ngModel)]="contact.name"
+                required
+              />
+            </div>
+
+            <!-- Email y Teléfono en una fila en desktop -->
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <input
+                  type="email"
+                  class="form-control input-underline"
+                  id="inputEmail"
+                  name="email"
+                  placeholder="Email*"
+                  [(ngModel)]="contact.email"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="tel"
+                  class="form-control input-underline"
+                  id="inputPhone"
+                  name="phone"
+                  placeholder="Teléfono*"
+                  [(ngModel)]="contact.phone"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Mensaje libre -->
+            <div class="mb-3">
+              <textarea
+                class="form-control input-underline"
+                id="inputMessage"
+                name="message"
+                rows="3"
+                placeholder="Cuéntanos tu proyecto"
+                [(ngModel)]="contact.message"
+              ></textarea>
+            </div>
+
+            <!-- Términos y condiciones -->
+            <div class="form-check mb-4">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="inputTerms"
+                name="terms"
+                [(ngModel)]="contact.terms"
+                required
+              />
+              <label
+                class="form-check-label text-dark"
+                for="inputTerms"
+                style="font-size: 0.9rem;"
+              >
+                Acepto las
+                <a href="/politica-privacidad" class="text-decoration-underline">
+                  condiciones legales
+                </a>
+                y la
+                <a href="/privacidad" class="text-decoration-underline">
+                  política de privacidad
+                </a>
+                de Startes.
+              </label>
+            </div>
+
+            <!-- Botón de envío -->
+            <div class="text-center">
+              <button
+                type="submit"
+                class="btn custom-btn btn-lg px-5"
+                [disabled]="consultingForm.invalid"
+              >
+                Consultoría gratuita
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

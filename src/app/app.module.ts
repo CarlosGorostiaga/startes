@@ -31,6 +31,9 @@ import { FeaturesComponent } from './components/features/features.component';
 import { ConjuntosServiciosComponent } from './components/conjuntos-servicios/conjuntos-servicios.component';
 import { FinancingoptionsComponent } from './components2/financingoptions/financingoptions.component';
 import { Navbar2Component } from './components/navbar2/navbar2.component';
+import { Footer2Component } from './components/footer2/footer2.component';
+import { Seccioncargadores1Component } from './components/seccioncargadores1/seccioncargadores1.component';
+import { FormularioContacto2Component } from './components/formulario-contacto2/formulario-contacto2.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +63,9 @@ import { Navbar2Component } from './components/navbar2/navbar2.component';
     ConjuntosServiciosComponent,
     FinancingoptionsComponent,
     Navbar2Component,
+    Footer2Component,
+    Seccioncargadores1Component,
+    FormularioContacto2Component,
   ],
   imports: [
     BrowserModule,

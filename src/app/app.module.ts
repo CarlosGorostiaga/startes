@@ -30,6 +30,7 @@ import { AboutComponent } from './components/about/about.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { ConjuntosServiciosComponent } from './components/conjuntos-servicios/conjuntos-servicios.component';
 import { FinancingoptionsComponent } from './components2/financingoptions/financingoptions.component';
+import { Navbar2Component } from './components/navbar2/navbar2.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { FinancingoptionsComponent } from './components2/financingoptions/financ
     FeaturesComponent,
     ConjuntosServiciosComponent,
     FinancingoptionsComponent,
+    Navbar2Component,
   ],
   imports: [
     BrowserModule,

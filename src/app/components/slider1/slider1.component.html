@@ -1,0 +1,67 @@
+<!-- Hero Section -->
+<section class="hero-section position-relative" [attr.data-card]="activeCard">
+  <!-- Capa SOLAR (background) -->
+  <div class="bg-layer layer-solar position-absolute top-0 start-0 w-100 h-100"></div>
+  <!-- Capa CHARGING (background) -->
+  <div class="bg-layer layer-charging position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <!-- Overlay oscuro semitransparente -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <!-- Contenido centrado -->
+  <div
+    class="container h-100 d-flex flex-column justify-content-center align-items-center position-relative text-center"
+    style="z-index: 3;"
+  >
+    <!-- Tarjeta Solar -->
+    <div *ngIf="activeCard === 'solar'" class="hero-content px-3">
+      <!-- Título (SEO + impacto): mezcla de blanco y amarillo, con <strong> -->
+      <h1 class="display-4 fw-bold mb-3">
+        <span class="text-warning">Instalación</span> y
+        <strong class="text-white">Mantenimiento</strong><br />
+        de <strong class="text-white">Placas Solares</strong> en el Corredor del Henares
+      </h1>
+
+      <!-- Subtítulo (ligeramente más ligero que el título, en blanco con palabra clave en amarillo) -->
+      <p class="lead fw-semibold">
+        <span class="text-warning">Ahorra</span> en tu factura con
+        <strong class="text-white">energía fotovoltaica</strong> de calidad
+      </p>
+
+      <!-- Botón CTA -->
+      <a
+        href="#contactForm"
+        class="btn btn-warning btn-lg mt-4 fw-bold px-5"
+        style="border-radius: 50px;"
+      >
+        CONTACTA
+      </a>
+    </div>
+
+    <!-- Tarjeta Charging -->
+    <div *ngIf="activeCard === 'charging'" class="hero-content px-3">
+      <!-- Título (SEO + impacto) -->
+      <h1 class="display-4 fw-bold mb-3">
+        <span class="text-warning">Puntos de Recarga</span> para
+        <strong class="text-white">Vehículos Eléctricos</strong><br />
+        en el Corredor del Henares
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="lead fw-semibold">
+        Cargadores <span class="text-warning">Profesionales</span> para
+        <strong class="text-white">hogares y empresas</strong>
+      </p>
+
+      <!-- Botón CTA -->
+      <a
+        href="#contactForm"
+        class="btn btn-warning btn-lg mt-4 fw-bold px-5"
+        style="border-radius: 50px;"
+      >
+        CONTACTA
+      </a>
+    </div>
+  </div>
+</section>
+

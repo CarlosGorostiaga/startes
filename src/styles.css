@@ -1,9 +1,22 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import '~animate.css/animate.min.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "~animate.css/animate.min.css";
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  background: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715310/solar-panel2_dibaqd.jpg")
+      no-repeat -9999px -9999px,
+    url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715247/charging-station2_p9ts9i.jpg")
+      no-repeat -9999px -9999px;
+  z-index: -1;
+}

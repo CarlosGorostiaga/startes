@@ -15,11 +15,15 @@
   
   /* Imagen de fondo para cada tarjeta */
   .hero-section[data-card="solar"] {
-    background-image: url("../../../assets/img/solar-panel2.jpg");
+    /* background-image: url("../../../assets/img/solar-panel2.jpg"); */
+    background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715310/solar-panel2_dibaqd.jpg");
+
   }
   
   .hero-section[data-card="charging"] {
-    background-image: url("../../../assets/img/charging-station2.jpg");
+    /* background-image: url("../../../assets/img/charging-station2.jpg"); */
+    background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715247/charging-station2_p9ts9i.jpg");
+
   }
   
   /* Capa de oscurecimiento */

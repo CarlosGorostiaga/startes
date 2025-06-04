@@ -1,0 +1,44 @@
+/* Estilos para .impact-section con fondo sólido */
+.impact-section {
+  background-color: #e8e8e9; /* Amarillo muy pálido */
+  color: #333;               /* Texto oscuro para contraste */
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.impact-section h2,
+.impact-section h3,
+.impact-section .lead {
+  margin-bottom: 1rem;
+}
+
+/* Botón CTA con sombra y animación sutil */
+.impact-section .btn-cta {
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #000 !important;
+}
+
+.impact-section .btn-cta:hover,
+.impact-section .btn-cta:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: #000 !important;
+}
+
+/* Responsive: ajustar tamaños en móvil */
+@media (max-width: 767px) {
+  .impact-section h2 {
+    font-size: 1.75rem;
+  }
+  .impact-section h3 {
+    font-size: 1.25rem;
+  }
+  .impact-section .lead {
+    font-size: 1rem;
+  }
+}
+
+

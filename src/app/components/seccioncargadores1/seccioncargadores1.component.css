@@ -1,0 +1,120 @@
+/* ========================================================= */
+/* 1. ESTILOS GENERALES (para escritorio y tablet ≥ 992px)   */
+/* ========================================================= */
+.installation-section .punto-box {
+  background: #fff; /* Cada “punto” sigue con su fondo blanco */
+  padding: 1rem; /* Espacio interno para el texto */
+  border-radius: 0.5rem; /* Esquinas redondeadas */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 1rem; /* Separación entre cada punto */
+}
+
+.installation-section .numero {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333333;
+  margin-right: 1rem;
+  line-height: 1;
+}
+
+.installation-section .texto p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.installation-section .image-col img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ========================================================= */
+/* 2. AJUSTES PARA VISTA MÓVIL (ancho < 992px)               */
+/* ========================================================= */
+@media (max-width: 991px) {
+  /* ----------------------------------------------------- */
+  /* 1. Ocultar la imagen <img> dentro de .image-col       */
+  /* ----------------------------------------------------- */
+  .installation-section .image-col {
+    display: none;
+  }
+
+  /* ----------------------------------------------------- */
+  /* 2. Ponemos la foto como fondo de .installation-wrapper*/
+  /*    Ajustamos padding-top para reducir la altura       */
+  /* ----------------------------------------------------- */
+  .installation-section .installation-wrapper {
+    background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/w_400,f_auto,q_auto/v1748710869/cargador1_le55dp.png");
+    /* Cambiamos de 'cover' a 'contain' para que no recorte tanto
+       y se muestre completa dentro del div, aunque queden bandas vacías. */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Reducimos padding-top para que la "caja de fondo" sea menos alta.
+       Prueba valores entre 40% y 60% según qué tanto quieras “apilar” texto
+       sobre la imagen sin que esta ocupe el 100% de la altura. */
+    /* padding-top: 70%;  <-- AJUSTA AQUÍ: por ejemplo 55% en lugar de 70% */
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ----------------------------------------------------- */
+  /* 3. Cada bloque de punto (punto-box) permanece en white  */
+  /*    pero ahora está directamente sobre la imagen.      */
+  /* ----------------------------------------------------- */
+
+  .installation-section .punto-box {
+    /* Antes tenías:
+     background: #fff;
+     para un fondo 100% blanco. */
+    background: rgba(255,255,255,0.95); /* <- fondo blanco con 85% de opacidad */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* ----------------------------------------------------- */
+  /* 4. Ajustes tipográficos para texto dentro de punto-box*/
+  /* ----------------------------------------------------- */
+  .installation-section .numero {
+    font-size: 1.8rem; /* Ligero ajuste para que no sea demasiado grande */
+    font-weight: 700;
+    color: #333333;
+    margin-right: 0.75rem;
+    /* No text-shadow, porque va sobre blanco */
+  }
+
+  .installation-section .texto p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #222;
+  }
+
+  /* ----------------------------------------------------- */
+  /* 5. Hacemos que cada .items-col ocupe todo el ancho     */
+  /* ----------------------------------------------------- */
+  .installation-section .items-col {
+    width: 100%;
+    display: block;
+    background: none; /* Sin fondo extra en la columna */
+    padding: 0; /* Sin padding extra */
+    margin-bottom: 1rem;
+  }
+
+  /* ----------------------------------------------------- */
+  /* 6. El row no añade márgenes laterales                 */
+  /* ----------------------------------------------------- */
+  .installation-section .installation-wrapper .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

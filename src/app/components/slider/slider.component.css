@@ -16,7 +16,9 @@
   /* Imagen de fondo para cada tarjeta */
   .hero-section[data-card="solar"] {
     /* background-image: url("../../../assets/img/solar-panel2.jpg"); */
-    background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715310/solar-panel2_dibaqd.jpg");
+    /* background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715310/solar-panel2_dibaqd.jpg"); */
+    background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1749070636/pexels-gustavo-fring-4254168_gtb7oq.jpg");
+
 
   }
   

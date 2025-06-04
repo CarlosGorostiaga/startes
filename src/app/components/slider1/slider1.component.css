@@ -27,7 +27,9 @@
 
 /* Fondo SOLAR visible cuando data-card="solar" */
 .hero-section[data-card="solar"] .layer-solar {
-  background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715310/solar-panel2_dibaqd.jpg");
+  /* background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715310/solar-panel2_dibaqd.jpg"); */
+  background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1749070636/pexels-gustavo-fring-4254168_gtb7oq.jpg");
+
   opacity: 1;
 }
 
@@ -83,16 +85,16 @@
 
 /* Botón personalizado (ya no usa btn-primary, sino estilo propio con btn-warning) */
 .hero-section .btn-warning {
-  background-color: #f4c300;
-  border-color: #f4c300;
-  color: #000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #000 !important;
 }
 .hero-section .btn-warning:hover,
 .hero-section .btn-warning:focus {
-  background-color: #e0b500;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: #000 !important;
 }
 
 /* Responsive: Ajustes en pantallas muy pequeñas */

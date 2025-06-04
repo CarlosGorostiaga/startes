@@ -35,6 +35,7 @@ import { Footer2Component } from './components/footer2/footer2.component';
 import { Seccioncargadores1Component } from './components/seccioncargadores1/seccioncargadores1.component';
 import { FormularioContacto2Component } from './components/formulario-contacto2/formulario-contacto2.component';
 import { Slider1Component } from './components/slider1/slider1.component';
+import { SeccionImpactoComponent } from './components/seccion-impacto/seccion-impacto.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { Slider1Component } from './components/slider1/slider1.component';
     Seccioncargadores1Component,
     FormularioContacto2Component,
     Slider1Component,
+    SeccionImpactoComponent,
   ],
   imports: [
     BrowserModule,

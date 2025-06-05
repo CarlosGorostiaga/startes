@@ -1,17 +1,24 @@
-/* ============================= */
-/* Hero Section (Slider) General */
-/* ============================= */
-.hero-section {
-  height: 60vh; /* Ajusta la altura general */
-  min-height: 400px;
-  position: relative;
-  overflow: hidden;
-  color: #fff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+/* =========================================
+   Estilos para Hero-Cards (Solar / Charging)
+   ========================================= */
+
+/* Asegura Montserrat en todo el componente */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Cada capa (bg-layer) con su propia transición de opacidad */
-.hero-section .bg-layer {
+/* ===== Sección principal ===== */
+.hero-cards-section {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* ===== Capas de fondo (bg-layer) ===== */
+.hero-cards-section .bg-layer {
   position: absolute;
   top: 0;
   left: 0;
@@ -21,32 +28,32 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: opacity 0.5s ease-in-out;
-  opacity: 0;      /* Por defecto, invisible */
+  opacity: 0; /* Invisible por defecto */
   z-index: 1;
 }
 
 /* Fondo SOLAR visible cuando data-card="solar" */
-.hero-section[data-card="solar"] .layer-solar {
-  /* background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715310/solar-panel2_dibaqd.jpg"); */
+.hero-cards-section[data-card="solar"] .layer-solar {
+  /* URL original de Cloudinary para la capa solar */
   background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1749070636/pexels-gustavo-fring-4254168_gtb7oq.jpg");
-
   opacity: 1;
 }
 
 /* Fondo CHARGING visible cuando data-card="charging" */
-.hero-section[data-card="charging"] .layer-charging {
+.hero-cards-section[data-card="charging"] .layer-charging {
+  /* URL original de Cloudinary para la capa charging */
   background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715247/charging-station2_p9ts9i.jpg");
   opacity: 1;
 }
 
-/* Asegurar que la capa no activa permanezca oculta */
-.hero-section[data-card="solar"] .layer-charging,
-.hero-section[data-card="charging"] .layer-solar {
+/* Asegura que la capa no activa permanezca oculta */
+.hero-cards-section[data-card="solar"] .layer-charging,
+.hero-cards-section[data-card="charging"] .layer-solar {
   opacity: 0;
 }
 
-/* Overlay oscuro semitransparente */
-.hero-section .overlay {
+/* ===== Overlay oscuro semitransparente ===== */
+.hero-cards-section .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -56,57 +63,115 @@
   z-index: 2;
 }
 
-/* Contenedor de texto centrado */
-.hero-section .container {
+/* ===== Contenedor de texto ===== */
+.hero-cards-section .container {
+  position: relative;
   z-index: 3;
 }
 
-/* =================== */
-/* Estilos de Hero-content */
-/* =================== */
-.hero-section .hero-content {
+/* ===== Hero content ===== */
+.hero-cards-section .hero-content {
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Títulos */
-.hero-section h1 {
+/* ===== Título principal ===== */
+.hero-cards-section h1.hero-title {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-/* Subtítulos */
-.hero-section p.lead {
+/* Segunda línea del título dentro de h1 (subtítulo interno) */
+.hero-cards-section .hero-subtitle-second-line {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+/* ===== Subtítulo externo ===== */
+.hero-cards-section p.hero-subtitle {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
 }
 
-/* Botón personalizado (ya no usa btn-primary, sino estilo propio con btn-warning) */
-.hero-section .btn-warning {
+/* ===== Botón CTA ===== */
+.hero-cards-section .hero-btn {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+  border: none;
   border-radius: 50px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  color: #000 !important;
-}
-.hero-section .btn-warning:hover,
-.hero-section .btn-warning:focus {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  color: #000 !important;
 }
 
-/* Responsive: Ajustes en pantallas muy pequeñas */
+.hero-cards-section .hero-btn:hover,
+.hero-cards-section .hero-btn:focus {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+/* ===== Responsive ===== */
+
+/* En pantallas ≥ 768px (tablets y desktop) */
+@media (min-width: 768px) {
+  .hero-cards-section {
+    height: 50vh;
+    min-height: 350px;
+  }
+  .hero-cards-section h1.hero-title {
+    font-size: 2.75rem;
+  }
+  .hero-cards-section .hero-subtitle-second-line {
+    font-size: 1.5rem;
+  }
+  .hero-cards-section p.hero-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* En pantallas ≥ 992px (desktop) */
+@media (min-width: 992px) {
+  .hero-cards-section {
+    height: 45vh;
+    min-height: 300px;
+  }
+  .hero-cards-section h1.hero-title {
+    font-size: 3rem;
+  }
+  .hero-cards-section .hero-subtitle-second-line {
+    font-size: 1.75rem;
+  }
+  .hero-cards-section p.hero-subtitle {
+    font-size: 1.3rem;
+  }
+}
+
+/* En móviles (< 768px) */
 @media (max-width: 767px) {
-  .hero-section {
-    height: auto; /* Adaptar altura automática si el texto es muy grande */
+  .hero-cards-section {
+    height: auto;
     padding: 3rem 1rem;
   }
-  .hero-section h1 {
+  .hero-cards-section h1.hero-title {
     font-size: 1.8rem;
   }
-  .hero-section p.lead {
+  .hero-cards-section .hero-subtitle-second-line {
+    font-size: 1.25rem;
+  }
+  .hero-cards-section p.hero-subtitle {
     font-size: 1rem;
+  }
+  .hero-cards-section .hero-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
   }
 }

@@ -1,81 +1,145 @@
-.charger-section {
-  background-image: url("../../../assets/img/estacion-electrica.jpg"); /* Añade aquí la ruta a la imagen de fondo */
+/* =========================================
+   Styles para Sección EV Charger Hero
+   ========================================= */
+
+/* Fuerza Montserrat en todo el componente */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===== Contenedor principal (hero) ===== */
+.ev-charger-hero-section {
+  background-image: url("../../../assets/img/estacion-electrica.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  color: #fff;
-  padding: 100px 20px; /* Ajusta el padding según tus preferencias */
   position: relative;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Para mejorar la legibilidad del texto */
+  color: #ffffff;
+  min-height: 60vh;
   display: flex;
-  justify-content: space-between; /* Centra horizontalmente el contenido */
+  align-items: center;
+  padding: 2rem 1rem;
 }
 
-.small-text {
-  color: #ffcc00; /* Color destacado para el título pequeño */
-  letter-spacing: 2px;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.title {
-  font-weight: bold;
-  font-size: 2rem; /* Ajusta el tamaño de la fuente principal */
-  line-height: 1.2;
-  font-family: "Montserrat", sans-serif;
-}
-
-.subtitle {
-  font-size: 1.2rem; /* Ajusta el tamaño de la fuente del subtítulo */
-  margin-top: 20px;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-}
-
-.charger-section::before {
-  content: "";
+/* Overlay oscuro semitransparente */
+.ev-charger-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.25
-  ); /* Capa de oscurecimiento para mejorar el contraste del texto */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
-.container {
+/* Contenedor interno (texto + botón) */
+.ev-charger-container {
   position: relative;
-  z-index: 2; /* Coloca el contenido encima de la capa oscurecida */
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-/* Ajustes para pantallas grandes */
+/* ===== Subtítulo pequeño ===== */
+.ev-charger-subtitle {
+  color: #ffcc00;
+  letter-spacing: 1.5px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* ===== Título principal ===== */
+.ev-charger-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+/* En pantallas ≥768px, agrandar título */
+@media (min-width: 768px) {
+  .ev-charger-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===== Divisor dorado ===== */
+.ev-charger-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin-bottom: 1rem;
+}
+
+/* ===== Texto descriptivo ===== */
+.ev-charger-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 auto 1.5rem;
+  max-width: 650px;
+}
+
+/* Agrandar texto en pantallas ≥768px */
+@media (min-width: 768px) {
+  .ev-charger-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Botón CTA ===== */
+.ev-charger-btn {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.ev-charger-btn:hover {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+/* ===== Ajustes para pantallas grandes (≥992px) ===== */
 @media (min-width: 992px) {
-  .charger-section {
-    background-image: url("../../../assets/img/estacion-electrica-desktop.jpg");
-    height: 45vh; /* Ajusta la altura para pantallas grandes */
-    display: flex;
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    text-align: center; /* Alinea el texto al centro */
+  .ev-charger-hero-section {
+    min-height: 50vh;
+    padding: 0;
   }
-
-  .small-text {
-    font-size: 1.5rem; /* Tamaño de fuente mayor en escritorio */
-    margin-bottom: 15px;
-  }
-
-  .title {
-    font-size: 2.5rem; /* Tamaño de fuente mayor en escritorio */
-  }
-
-  .subtitle {
-    font-size: 1.3rem; /* Tamaño de fuente mayor en escritorio */
-    margin-top: 10px;
+  .ev-charger-container {
+    max-width: 700px;
+    padding: 0;
   }
 }
+
+/* ===== Ajustes para pantallas pequeñas (<768px) ===== */
+@media (max-width: 767px) {
+  .ev-charger-hero-section {
+    padding: 2rem 0.5rem;
+    min-height: 55vh;
+  }
+  .ev-charger-title {
+    font-size: 1.5rem;
+  }
+  .ev-charger-text {
+    font-size: 0.95rem;
+  }
+  .ev-charger-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+

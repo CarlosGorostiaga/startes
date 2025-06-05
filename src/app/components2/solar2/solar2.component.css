@@ -1,65 +1,211 @@
-/* Estilos para la sección de servicios */
-.services-section {
-  background-color: #f8f9fa;
-  /* border: solid 1px red; */
+/* =========================================
+   Estilos para Sección Fotovoltaica y Tarjetas
+   ========================================= */
+
+/* Montserrat en todo el componente */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Estilos para las tarjetas */
-.service-card {
-  border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
+/* ===== Sección de Introducción Solar ===== */
+.solar-intro-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8e8e9 100%);
+  color: #333333;
+  padding: 3rem 1rem;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+@media (min-width: 992px) {
+  .solar-intro-section {
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    padding: 0;
+  }
+  .solar-intro-container {
+    max-width: 700px;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 
-/* Estilo del ícono en cada tarjeta */
-.icon {
-  font-size: 2.5rem;
-  color: #ffcc00; /* Color de ícono */
+.solar-intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-.card-title {
-  font-weight: bold;
-  color: #333;
-  font-family: "Montserrat", sans-serif;
+.solar-intro-subtitle {
+  color: #ffcc00;
+  letter-spacing: 1.5px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
-.card-text {
-  color: #666;
-  font-family: "Montserrat", sans-serif;
-}
-
-/*********** Estilos para la sección de introducción *************/
-.intro-section {
-  background-color: #f8f9fa; /* Fondo claro */
-  color: #333; /* Color del texto */
-  font-family: "Montserrat", sans-serif;
-  padding: 20px;
-}
-
-.intro-subtitle {
-  color: #ff9900; /* Color destacado para el subtítulo */
-  letter-spacing: 1px;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-}
-
-.intro-title {
-  font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.solar-intro-title {
+  font-size: 1.75rem;
+  font-weight: 800;
   line-height: 1.2;
+  margin-bottom: 0.75rem;
+  color: #333333;
+  text-transform: none;
 }
 
-.intro-text {
-  color: #555;
+@media (min-width: 768px) {
+  .solar-intro-title {
+    font-size: 2.5rem;
+  }
+}
+
+.solar-intro-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin-bottom: 1rem;
+}
+
+.solar-intro-text {
+  color: #555555;
   font-size: 1rem;
   line-height: 1.6;
-  font-family: "Montserrat", sans-serif;
+  margin: 0 auto 1.5rem;
+  max-width: 700px;
+}
+
+@media (min-width: 768px) {
+  .solar-intro-text {
+    font-size: 1.1rem;
+  }
+}
+
+.solar-intro-btn {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.solar-intro-btn:hover {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+@media (max-width: 767px) {
+  .solar-intro-section {
+    padding: 2rem 0.5rem;
+    min-height: 55vh;
+  }
+  .solar-intro-title {
+    font-size: 1.5rem;
+  }
+  .solar-intro-text {
+    font-size: 0.95rem;
+  }
+  .solar-intro-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ===== Sección de Tarjetas Fotovoltaicas ===== */
+.solar-services-section {
+  background-color: #f8f9fa;
+  padding: 3rem 1rem;
+}
+
+.solar-services-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Tarjetas: uniformes y flexibles */
+.solar-service-card {
+  border: none;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.solar-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper de icono circular */
+.solar-service-icon-wrapper {
+  background-color: #ffcc00;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.solar-service-icon {
+  font-size: 2rem;
+  color: #1c1c1c;
+}
+
+.solar-service-card:hover .solar-service-icon-wrapper {
+  background-color: #e6b800;
+}
+
+/* Título y texto de cada tarjeta */
+.solar-service-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.solar-service-text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* En móviles, ajustar padding y tamaños ligeramente */
+@media (max-width: 767px) {
+  .solar-service-card {
+    padding: 1.5rem 1rem;
+  }
+  .solar-service-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  .solar-service-icon {
+    font-size: 1.75rem;
+  }
+  .solar-service-title {
+    font-size: 1.15rem;
+  }
+  .solar-service-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Asegura que las tarjetas llenen su columna de forma uniforme */
+.solar-services-section .row > .col {
+  display: flex;
+  align-items: stretch;
 }

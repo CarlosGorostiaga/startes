@@ -1,71 +1,66 @@
-/* Estilos generales */
-body {
-  background-color: #1c1c1c;
-  color: #e0e0e0;
-  font-family: "Montserrat", sans-serif;
+/* =========================================
+   Estilos para Sección de Línea de Tiempo
+   ========================================= */
+
+/* Asegura Montserrat en todo este componente */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* ===== Fondo general y color de texto ===== */
 .timeline-section {
   background-color: #1c1c1c;
+  color: #e0e0e0;
 }
 
-/* Contenedor de la línea de tiempo */
-.timeline-steps {
+/* ===== Título principal ===== */
+.timeline-title {
+  color: #ffcc00;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* ===== Contenedor de pasos ===== */
+.timeline-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* Ajuste para centrar los elementos */
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
   margin-top: 2rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  /* border: solid 1px red; */
+  padding: 0 2%;
 }
 
-/* Cada paso de la línea de tiempo */
+/* Línea horizontal detrás de los círculos */
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 2rem; /* Ajustar para centrar la línea respecto al círculo */
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background-color: #ffcc00;
+  z-index: 1;
+}
+
+/* ===== Cada paso de la línea de tiempo ===== */
 .timeline-step {
+  position: relative;
+  flex: 1;
+  max-width: 22%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-items: center;
-  width: 22%;
-  position: relative;
-  margin: 1rem;
-  /* border: solid 1px red; */
+  z-index: 2; /* Encima de la línea */
+  padding: 0 0.5rem;
 }
 
-/* Línea horizontal entre los pasos */
-.timeline-step:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 1.5rem;
-  right: -5rem;
-  width: 6rem;
-  height: 2px;
-  background-color: #ffcc00;
-}
-
-@media (max-width: 992px) {
-  .timeline-step:not(:last-child)::after {
-    right: -3rem;
-    width: 5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .timeline-steps {
-    flex-direction: column;
-    align-items: center;
-  }
-  .timeline-step {
-    width: 80%;
-  }
-  .timeline-step:not(:last-child)::after {
-    display: none;
-  }
-}
-
-/* Círculo numerado */
+/* ===== Círculo numerado ===== */
 .inner-circle {
   background-color: #ffcc00;
   color: #1c1c1c;
@@ -75,40 +70,74 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-family: "Montserrat", sans-serif;
-
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.timeline-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-items: center;
+/* Hover: aumenta ligeramente el círculo */
+@media (hover: hover) {
+  .timeline-step:hover .inner-circle {
+    transform: scale(1.1);
+    background-color: #e6b800;
+  }
 }
 
-/* Títulos y textos */
-.timeline-content h5 {
-  color: #00ccff;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-
-
+/* ===== Título de cada paso ===== */
+.step-title {
+  color: #ffcc00;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
 }
 
-.timeline-content h2 {
-  color: #00ccff;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-
-
-}
-
-.timeline-content p {
+/* ===== Texto de cada paso ===== */
+.step-text {
   color: #e0e0e0;
-  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 200px;
+}
 
+/* ===== Responsive ===== */
+
+/* Hasta 992px: ajusta la línea y pasos más compactos */
+@media (max-width: 992px) {
+  .timeline-wrapper::before {
+    left: 8%;
+    right: 8%;
+  }
+  .timeline-step {
+    max-width: 25%;
+  }
+}
+
+/* Pantallas pequeñas (<768px): columna vertical */
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .timeline-wrapper::before {
+    display: none; /* Oculta la línea horizontal en mobile */
+  }
+  .timeline-step {
+    width: 80%;
+    max-width: none;
+    margin-bottom: 2rem;
+  }
+  .inner-circle {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+  .step-title {
+    font-size: 1rem;
+  }
+  .step-text {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
 }

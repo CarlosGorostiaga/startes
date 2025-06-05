@@ -1,96 +1,166 @@
 <!-- calculadora-recarga.component.html -->
 <div class="calculator-container">
-    <!-- Indicador de progreso -->
-    <div *ngIf="currentStep > 0 && currentStep <= totalSteps" class="progress mb-4">
-      <div class="progress-bar" role="progressbar" [style.width.%]="(currentStep / totalSteps) * 100"></div>
-    </div>
-  
-    <!-- Paso 0: Introducción -->
-    <div *ngIf="currentStep === 0" class="step text-center animate__animated animate__fadeIn">
-      <h2>Calculemos tu instalación</h2>
-      <p>Descubre el precio aproximado para instalar tu punto de recarga.</p>
-      <button class="btn btn-primary mt-3" (click)="nextStep()">
-        <i class="bi bi-rocket-fill me-2"></i> Comenzar
-      </button>
-    </div>
-  
-    <!-- Paso 1: Código Postal -->
-    <div *ngIf="currentStep === 1" class="step animate__animated animate__fadeIn">
-      <h3>¿Cuál es tu código postal?</h3>
-      <input type="text" [(ngModel)]="postalCode" class="form-control" placeholder="Introduce tu código postal">
-      <button class="btn btn-primary mt-3" [disabled]="!postalCode || postalCode.length !== 5" (click)="nextStep()">Siguiente</button>
-      <div *ngIf="postalCode && postalCode.length !== 5" class="text-danger mt-2">
-        Por favor, introduce un código postal válido de 5 dígitos.
-      </div>
-    </div>
-  
-    <!-- Paso 2: Tipo de Instalación -->
-    <div *ngIf="currentStep === 2" class="step animate__animated animate__fadeIn">
-      <h3>¿Dónde instalaremos el cargador?</h3>
-      <div class="options">
-        <div class="option" (click)="installationType = 'vivienda'; nextStep();">
-          <i class="bi bi-house-fill icon"></i>
-          <p>Vivienda</p>
-        </div>
-        <div class="option" (click)="installationType = 'comunidad'; nextStep();">
-          <i class="bi bi-people-fill icon"></i>
-          <p>Comunidad</p>
-        </div>
-        <div class="option" (click)="installationType = 'empresa'; nextStep();">
-          <i class="bi bi-building icon"></i>
-          <p>Empresa</p>
-        </div>
-      </div>
-      <button class="btn btn-secondary mt-3" (click)="previousStep()">Anterior</button>
-    </div>
-  
-    <!-- Paso 3: Instalación Fotovoltaica -->
-    <div *ngIf="currentStep === 3" class="step animate__animated animate__fadeIn">
-      <h3>¿Cuentas con instalación fotovoltaica?</h3>
-      <p>Indica si cuentas con instalación fotovoltaica para cargar tu coche eléctrico con paneles solares.</p>
-      <div class="options">
-        <div class="option" (click)="hasSolarPanels = 'si'; nextStep();">
-          <i class="bi bi-sun-fill icon"></i>
-          <p>Sí</p>
-        </div>
-        <div class="option" (click)="hasSolarPanels = 'no'; nextStep();">
-          <i class="bi bi-cloud-fill icon"></i>
-          <p>No</p>
-        </div>
-      </div>
-      <button class="btn btn-secondary mt-3" (click)="previousStep()">Anterior</button>
-    </div>
-  
-    <!-- Paso 4: Distancia -->
-    <div *ngIf="currentStep === 4" class="step animate__animated animate__fadeIn">
-      <h3>¿Cuántos metros hay desde el cuadro de protecciones hasta tu plaza de garaje?</h3>
-      <div class="options">
-        <div class="option" (click)="distance = 'menos de 10 metros'; nextStep();">
-          <i class="bi bi-rulers icon"></i>
-          <p>Menos de 10 metros</p>
-        </div>
-        <div class="option" (click)="distance = '20 metros'; nextStep();">
-          <i class="bi bi-rulers icon"></i>
-          <p>20 metros</p>
-        </div>
-        <div class="option" (click)="distance = '30 metros'; nextStep();">
-          <i class="bi bi-rulers icon"></i>
-          <p>30 metros</p>
-        </div>
-        <div class="option" (click)="distance = 'más de 30 metros'; nextStep();">
-          <i class="bi bi-rulers icon"></i>
-          <p>Más de 30 metros</p>
-        </div>
-      </div>
-      <button class="btn btn-secondary mt-3" (click)="previousStep()">Anterior</button>
-    </div>
-  
-    <!-- Paso 5: Resultado -->
-    <div *ngIf="currentStep === 5" class="step animate__animated animate__fadeIn">
-      <h3>¡Ya conocemos tus condiciones!</h3>
-      <p>El precio aproximado de la instalación es:</p>
-      <h2 class="price">{{ priceAdjustment }} €</h2>
-      <p>Completa tus datos para obtener un presupuesto detallado.</p>
-      <button class="btn btn-primary mt-3" (click)="startOver()">Comenzar de nuevo</button>
+  <!-- Indicador de progreso -->
+  <div *ngIf="currentStep > 0 && currentStep <= totalSteps" class="progress mb-4">
+    <div class="progress-bar" role="progressbar" [style.width.%]="(currentStep / totalSteps) * 100"></div>
+  </div>
+
+  <!-- Paso 0: Introducción -->
+  <div *ngIf="currentStep === 0" class="step text-center animate__animated animate__fadeIn">
+    <h2>Calculemos tu instalación</h2>
+    <p>Descubre el precio aproximado para instalar tu punto de recarga.</p>
+    <button class="btn btn-primary mt-3" (click)="nextStep()">
+      <i class="bi bi-rocket-fill me-2"></i> Comenzar
+    </button>
+  </div>
+
+  <!-- Paso 1: Código Postal -->
+  <div *ngIf="currentStep === 1" class="step animate__animated animate__fadeIn">
+    <h3>¿Cuál es tu código postal?</h3>
+    <input
+      type="text"
+      [(ngModel)]="postalCode"
+      class="form-control"
+      placeholder="Introduce tu código postal"
+    />
+    <button
+      class="btn btn-primary mt-3"
+      [disabled]="!postalCode || postalCode.length !== 5"
+      (click)="nextStep()"
+    >
+      Siguiente
+    </button>
+    <div *ngIf="postalCode && postalCode.length !== 5" class="text-danger mt-2">
+      Por favor, introduce un código postal válido de 5 dígitos.
     </div>
   </div>
+
+  <!-- Paso 2: Tipo de Instalación -->
+  <div *ngIf="currentStep === 2" class="step animate__animated animate__fadeIn">
+    <h3>¿Dónde instalaremos el cargador?</h3>
+    <div class="options">
+      <div class="option" (click)="chooseType('vivienda')">
+        <i class="bi bi-house-fill icon"></i>
+        <p>Vivienda</p>
+      </div>
+      <div class="option" (click)="chooseType('comunidad')">
+        <i class="bi bi-people-fill icon"></i>
+        <p>Comunidad</p>
+      </div>
+    </div>
+    <button class="btn btn-secondary mt-3" (click)="previousStep()">Anterior</button>
+  </div>
+
+  <!-- Paso 3: Fotovoltaica (solo para vivienda) -->
+  <div
+    *ngIf="currentStep === 3 && installationType === 'vivienda'"
+    class="step animate__animated animate__fadeIn"
+  >
+    <h3>¿Cuentas con instalación fotovoltaica?</h3>
+    <p>Indica si cuentas con instalación fotovoltaica para cargar tu coche eléctrico con paneles solares.</p>
+    <div class="options">
+      <div class="option" (click)="hasSolarPanels = 'si'; nextStep();">
+        <i class="bi bi-sun-fill icon"></i>
+        <p>Sí</p>
+      </div>
+      <div class="option" (click)="hasSolarPanels = 'no'; nextStep();">
+        <i class="bi bi-cloud-fill icon"></i>
+        <p>No</p>
+      </div>
+    </div>
+    <button class="btn btn-secondary mt-3" (click)="previousStep()">Anterior</button>
+  </div>
+
+  <!-- Paso 3 (alternativo): Plantas (solo para comunidad) -->
+  <div
+    *ngIf="currentStep === 3 && installationType === 'comunidad'"
+    class="step animate__animated animate__fadeIn"
+  >
+    <h3>¿Cuántas plantas hay entre tu plaza y el cuarto de contadores?</h3>
+    <p>
+      Ej.: si la sala de contadores está en la planta 0 y tu plaza en la -2,
+      hay dos plantas de diferencia.
+    </p>
+    <input
+      type="number"
+      [(ngModel)]="floorsDifference"
+      class="form-control"
+      placeholder="Introduce número de plantas"
+      min="0"
+    />
+    <button
+      class="btn btn-primary mt-3"
+      [disabled]="floorsDifference === null || floorsDifference < 0"
+      (click)="nextStep()"
+    >
+      Siguiente
+    </button>
+    <button class="btn btn-secondary mt-3 ms-2" (click)="previousStep()">Anterior</button>
+  </div>
+
+  <!-- Paso 4: Distancia (vivienda y comunidad) -->
+  <div *ngIf="currentStep === 4" class="step animate__animated animate__fadeIn">
+    <h3>¿Cuántos metros hay desde el cuadro de protecciones hasta tu plaza de garaje?</h3>
+    <div class="options">
+      <div class="option" (click)="setDistance('menos de 10 metros'); nextStep();">
+        <i class="bi bi-rulers icon"></i>
+        <p>Menos de 10 metros</p>
+      </div>
+      <div class="option" (click)="setDistance('20 metros'); nextStep();">
+        <i class="bi bi-rulers icon"></i>
+        <p>20 metros</p>
+      </div>
+      <div class="option" (click)="setDistance('30 metros'); nextStep();">
+        <i class="bi bi-rulers icon"></i>
+        <p>30 metros</p>
+      </div>
+      <div class="option" (click)="setDistance('más de 30 metros'); nextStep();">
+        <i class="bi bi-rulers icon"></i>
+        <p>Más de 30 metros</p>
+      </div>
+    </div>
+    <button class="btn btn-secondary mt-3" (click)="previousStep()">Anterior</button>
+  </div>
+
+  <!-- Paso 5: Selección de cargador (vivienda y comunidad) -->
+  <div *ngIf="currentStep === 5" class="step animate__animated animate__fadeIn">
+    <h3>Elige tu cargador</h3>
+    <div class="options">
+      <div class="option" (click)="selectCharger('Cargador Básico'); nextStep();">
+        <i class="bi bi-battery-charging icon"></i>
+        <p>Cargador Básico (+ 300 €)</p>
+      </div>
+      <div class="option" (click)="selectCharger('Cargador Avanzado'); nextStep();">
+        <i class="bi bi-battery-half icon"></i>
+        <p>Cargador Avanzado (+ 400 €)</p>
+      </div>
+      <div class="option" (click)="selectCharger('Cargador Premium'); nextStep();">
+        <i class="bi bi-battery-full icon"></i>
+        <p>Cargador Premium (+ 500 €)</p>
+      </div>
+    </div>
+    <button class="btn btn-secondary mt-3" (click)="previousStep()">Anterior</button>
+  </div>
+
+  <!-- Paso 6: Resultado -->
+<!-- Paso 6: Resultado -->
+<div *ngIf="currentStep === 6" class="step text-center animate__animated animate__fadeIn">
+  <h3>¡Ya conocemos tus condiciones!</h3>
+  <p>El precio aproximado de la instalación es:</p>
+  <h2 class="price">{{ priceAdjustment }} €</h2>
+  <p>
+    Estos precios son orientativos y están sujetos a visita previa de uno de
+    nuestros técnicos.
+  </p>
+
+  <!-- Botón para enviar datos y desplazarse al formulario -->
+  <button class="btn btn-success mt-3 me-2" (click)="sendData()">
+    <i class="bi bi-send-fill me-2"></i> Enviar datos
+  </button>
+
+  <!-- Botón para reiniciar la calculadora -->
+  <button class="btn btn-secondary mt-3" (click)="startOver()">
+    <i class="bi bi-arrow-counterclockwise me-2"></i> Calcular de nuevo
+  </button>
+</div>
+</div>

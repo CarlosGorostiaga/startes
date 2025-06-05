@@ -1,0 +1,72 @@
+/* trusted-companies.component.css */
+
+/* ===== Sección general ===== */
+.trusted-companies-section {
+  background-color: #f7f8fa; /* Gris muy suave de fondo */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===== Título de sección ===== */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+}
+
+/* ===== Carrusel ===== */
+
+/* Ajuste para los indicadores (puntos) */
+.carousel-indicators {
+  bottom: -30px; /* separarlos un poco de la base de los logos */
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cccccc;
+  opacity: 0.7;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: #ffcc00; /* Dorado */
+  opacity: 1;
+}
+
+/* Teñir las flechas con un filtro dorado/oscuro (no azul por defecto) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(0) sepia(0) saturate(0) brightness(0);
+}
+
+/* ===== Logos individuales ===== */
+.company-logo {
+  max-height: 80px; /* límite de altura para todos */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover: escala ligera en desktop */
+@media (hover: hover) {
+  .company-logo:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 576px) {
+  .company-logo {
+    max-height: 60px; /* más pequeños en móviles */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .company-logo {
+    max-height: 70px;
+  }
+}

@@ -1,0 +1,77 @@
+<!-- trusted-companies.component.html -->
+<section id="trusted-companies" class="trusted-companies-section py-5">
+  <div class="container">
+    <!-- Título principal -->
+    <h3
+      class="mb-2 text-center"
+      style="color: #333333; font-family: 'Montserrat', sans-serif; font-size: 1.75rem;"
+    >
+      Empresas y Certificaciones
+    </h3>
+
+    <!-- Carrusel con 2 logos por diapositiva -->
+    <div
+      id="companyCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="4000"
+    >
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button
+          *ngFor="let slide of getSlides(); let i = index"
+          type="button"
+          [attr.data-bs-target]="'#companyCarousel'"
+          [attr.data-bs-slide-to]="i"
+          [class.active]="i === 0"
+          [attr.aria-current]="i === 0 ? 'true' : null"
+          [attr.aria-label]="'Logos ' + (i + 1)"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div
+          *ngFor="let slide of getSlides(); let idx = index"
+          class="carousel-item"
+          [class.active]="idx === 0"
+        >
+          <div class="row justify-content-center align-items-center gx-3">
+            <div
+              *ngFor="let logo of slide"
+              class="col-6 d-flex justify-content-center"
+            >
+              <img
+                [src]="logo.src"
+                [alt]="logo.alt"
+                class="company-logo img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flechas de navegación (negro por defecto) -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#companyCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#companyCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+

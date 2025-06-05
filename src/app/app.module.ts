@@ -36,6 +36,8 @@ import { Seccioncargadores1Component } from './components/seccioncargadores1/sec
 import { FormularioContacto2Component } from './components/formulario-contacto2/formulario-contacto2.component';
 import { Slider1Component } from './components/slider1/slider1.component';
 import { SeccionImpactoComponent } from './components/seccion-impacto/seccion-impacto.component';
+import { CustomerReviewsComponent } from './components/customer-reviews/customer-reviews.component';
+import { TrustedCompaniesComponent } from './components/trusted-companies/trusted-companies.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +72,8 @@ import { SeccionImpactoComponent } from './components/seccion-impacto/seccion-im
     FormularioContacto2Component,
     Slider1Component,
     SeccionImpactoComponent,
+    CustomerReviewsComponent,
+    TrustedCompaniesComponent,
   ],
   imports: [
     BrowserModule,

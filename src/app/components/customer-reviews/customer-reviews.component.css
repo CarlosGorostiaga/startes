@@ -1,0 +1,111 @@
+/* customer-reviews.component.css */
+
+/* ===== Sección general ===== */
+.customer-reviews-section {
+  background-color: #f7f8fa; /* Gris muy muy suave */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ===== Encabezado de sección ===== */
+.section-header {
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: #ffcc00; /* Dorado suave */
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333333;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Carrusel ===== */
+.carousel-indicators {
+  bottom: -30px;
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cccccc;
+  opacity: 0.7;
+}
+
+.carousel-indicators .active {
+  background-color: #ffcc00; /* Indicador activo en dorado */
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  /* Teñir las flechas con un filtro dorado-oscuro */
+  filter: invert(0) sepia(0) saturate(0) brightness(0);
+}
+
+/* ===== Tarjeta de reseña ===== */
+.review-card {
+  max-width: 600px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 3rem; /* espacio debajo para móviles */
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 2px solid #ffcc00; /* Borde dorado para el avatar */
+}
+
+.reviewer-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.rating {
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+.rating-value {
+  font-weight: 500;
+  color: #333333;
+}
+
+.stars i {
+  margin-right: 2px;
+}
+
+.review-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555555;
+  margin-top: 0.75rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .review-card {
+    padding: 1rem;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}

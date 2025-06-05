@@ -1,0 +1,90 @@
+<section id="customer-reviews" class="customer-reviews-section py-5">
+  <div class="container">
+    <!-- Título de sección con icono de comillas -->
+    <div class="section-header text-center mb-4">
+      <i class="bi bi-chat-quote-fill quote-icon mb-2"></i>
+      <h3 class="section-title">Lo que opinan nuestros clientes</h3>
+    </div>
+
+    <!-- Carrusel de Opiniones -->
+    <div
+      id="reviewsCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="6000"
+    >
+      <!-- Indicadores (puntos) -->
+      <div class="carousel-indicators">
+        <button
+          *ngFor="let _ of reviews; let i = index"
+          type="button"
+          [attr.data-bs-target]="'#reviewsCarousel'"
+          [attr.data-bs-slide-to]="i"
+          [class.active]="i === 0"
+          aria-current="true"
+          [attr.aria-label]="'Reseña ' + (i + 1)"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div
+          *ngFor="let review of reviews; let idx = index"
+          class="carousel-item"
+          [class.active]="idx === 0"
+        >
+          <div class="review-card card shadow-sm mx-auto">
+            <div class="d-flex align-items-center mb-2">
+              <img
+                [src]="review.avatarUrl"
+                [alt]="'Avatar de ' + review.name"
+                class="rounded-circle avatar me-3"
+              />
+              <h5 class="mb-0 reviewer-name">{{ review.name }}</h5>
+            </div>
+            <div class="rating d-flex align-items-center mb-2">
+              <span class="rating-value me-2">{{ review.rating.toFixed(1) }}</span>
+              <div class="stars">
+                <ng-container *ngFor="let star of getStars(review.rating)">
+                  <i
+                    *ngIf="star === 'full'"
+                    class="bi bi-star-fill text-warning"
+                  ></i>
+                  <i
+                    *ngIf="star === 'half'"
+                    class="bi bi-star-half text-warning"
+                  ></i>
+                  <i
+                    *ngIf="star === 'empty'"
+                    class="bi bi-star text-warning"
+                  ></i>
+                </ng-container>
+              </div>
+            </div>
+            <p class="review-text">{{ review.text }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flechas de navegación -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#reviewsCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#reviewsCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</section>
+

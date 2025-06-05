@@ -1,0 +1,88 @@
+<section class="savings-simulator-section py-5">
+  <div class="container">
+    <!-- Título -->
+    <h2 class="section-title text-center mb-4">Calcula tu Ahorro Energético</h2>
+
+    <!-- Formulario de simulación -->
+    <form (ngSubmit)="calcularAhorro()" class="simulator-form mx-auto" style="max-width: 600px;">
+      <div class="row g-3">
+        <!-- Consumo mensual (kWh) -->
+        <div class="col-12 col-md-6">
+          <label for="consumo" class="form-label">
+            Consumo mensual (kWh) <span class="text-danger">*</span>
+          </label>
+          <input
+            type="number"
+            id="consumo"
+            class="form-control"
+            [(ngModel)]="consumo"
+            name="consumo"
+            min="0"
+            placeholder="Ej: 350"
+            required
+          />
+          <div class="form-text text-muted">Introduce tu consumo medio mensual. Ej: 350 kWh</div>
+        </div>
+
+        <!-- Precio kWh (€) -->
+        <div class="col-12 col-md-6">
+          <label for="precioKwh" class="form-label">
+            Precio kWh (€) <span class="text-danger">*</span>
+          </label>
+          <input
+            type="number"
+            step="0.01"
+            id="precioKwh"
+            class="form-control"
+            [(ngModel)]="precioKwh"
+            name="precioKwh"
+            min="0"
+            placeholder="Ej: 0.15"
+            required
+          />
+          <div class="form-text text-muted">Introduce el coste medio por kWh. Ej: 0,15 €</div>
+        </div>
+
+        <!-- Área disponible (m²) -->
+        <div class="col-12 col-md-6">
+          <label for="area" class="form-label">
+            Área disponible (m²) <span class="text-danger">*</span>
+          </label>
+          <input
+            type="number"
+            id="area"
+            class="form-control"
+            [(ngModel)]="area"
+            name="area"
+            min="0"
+            placeholder="Ej: 20"
+            required
+          />
+          <div class="form-text text-muted">Metros cuadrados útiles para paneles. Ej: 20 m²</div>
+        </div>
+
+        <!-- Botón de envío -->
+        <div class="col-12 col-md-6 d-flex align-items-end">
+          <button type="submit" class="btn btn-warning w-100">
+            Calcular
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Resultados -->
+    <div *ngIf="resultadoVisible" class="result mx-auto mt-4 text-center">
+      <h3 class="text-warning">Tu ahorro estimado</h3>
+      <p class="mb-1">
+        <strong>Potencia recomendada:</strong> {{ potenciaReco | number:'1.1-1' }} kW
+      </p>
+      <p class="mb-1">
+        <strong>Ahorro anual aproximado:</strong> {{ ahorroAnual | number:'1.2-2' }} €
+      </p>
+      <p>
+        <strong>Amortización estimada:</strong> {{ anosAmortizacion | number:'1.1-1' }} años
+      </p>
+    </div>
+  </div>
+</section>
+

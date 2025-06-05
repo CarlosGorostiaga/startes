@@ -1,0 +1,93 @@
+/* ===========================
+   Estilos para Savings Simulator
+   =========================== */
+
+/* Fuente Montserrat en todo el componente */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===== Sección general ===== */
+.savings-simulator-section {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* ===== Título ===== */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffcc00;
+  font-weight: 800;
+}
+
+/* ===== Formulario ===== */
+.simulator-form {
+  background-color: #f8f9fa;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.simulator-form .form-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #333333;
+}
+
+.simulator-form .form-control {
+  border-radius: 0.5rem;
+  border: 1px solid #cccccc;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Botón "Calcular" */
+.simulator-form .btn-warning {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.simulator-form .btn-warning:hover,
+.simulator-form .btn-warning:focus {
+  background-color: #e6b800;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+/* ===== Resultados ===== */
+.result h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffcc00;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.result p {
+  font-family: 'Montserrat', sans-serif;
+  color: #555555;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 767px) {
+  .simulator-form {
+    padding: 1.5rem;
+  }
+  .simulator-form .btn-warning {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  .result h3 {
+    font-size: 1.25rem;
+  }
+  .result p {
+    font-size: 0.95rem;
+  }
+}

@@ -39,6 +39,7 @@ import { SeccionImpactoComponent } from './components/seccion-impacto/seccion-im
 import { CustomerReviewsComponent } from './components/customer-reviews/customer-reviews.component';
 import { TrustedCompaniesComponent } from './components/trusted-companies/trusted-companies.component';
 import { UbicationComponent } from './components/ubication/ubication.component';
+import { SimulatorComponent } from './components/simulator/simulator.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { UbicationComponent } from './components/ubication/ubication.component';
     CustomerReviewsComponent,
     TrustedCompaniesComponent,
     UbicationComponent,
+    SimulatorComponent,
   ],
   imports: [
     BrowserModule,

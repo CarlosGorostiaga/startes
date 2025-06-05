@@ -1,0 +1,74 @@
+/* estilos para la sección “Encuéntranos” */
+.find-us-section {
+  background-color: #f7f8fa; /* Gris muy suave */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Tarjeta de contacto */
+.contact-card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.contact-card .card-body {
+  padding: 2rem;
+}
+
+/* Íconos y texto de contacto */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-item i {
+  font-size: 1.25rem;
+  margin-top: 0.125rem; /* para alinear un poco con el texto */
+}
+
+/* Mapa */
+.map-card {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+/* Si quieres que el mapa crezca en pantallas grandes: */
+@media (min-width: 992px) {
+  .map-card {
+    height: 350px;
+  }
+}
+
+/* Asegurar que los enlaces no cambien de color al pasar el ratón */
+.contact-card a {
+  transition: color 0.2s ease;
+}
+
+.contact-card a:hover {
+  color: #ffcc00; /* dorado al pasar */
+}
+
+/* Montserrat como fuente para párrafos de contacto */
+.contact-card p,
+.contact-card h5 {
+  font-family: 'Montserrat', sans-serif;
+  color: #444444;
+}
+
+/* Asegurar que los títulos pequeños usen Montserrat */
+.contact-card .card-title {
+  font-size: 1.25rem;
+}
+
+/* Si quieres un “lift” suave al pasar sobre la tarjeta de contacto */
+@media (hover: hover) {
+  .contact-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease;
+  }
+}

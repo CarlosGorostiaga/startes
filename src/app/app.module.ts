@@ -38,6 +38,7 @@ import { Slider1Component } from './components/slider1/slider1.component';
 import { SeccionImpactoComponent } from './components/seccion-impacto/seccion-impacto.component';
 import { CustomerReviewsComponent } from './components/customer-reviews/customer-reviews.component';
 import { TrustedCompaniesComponent } from './components/trusted-companies/trusted-companies.component';
+import { UbicationComponent } from './components/ubication/ubication.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { TrustedCompaniesComponent } from './components/trusted-companies/truste
     SeccionImpactoComponent,
     CustomerReviewsComponent,
     TrustedCompaniesComponent,
+    UbicationComponent,
   ],
   imports: [
     BrowserModule,

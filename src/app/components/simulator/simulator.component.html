@@ -12,34 +12,65 @@
 
     <!-- Explicación oculta por defecto -->
     <div *ngIf="infoVisible" class="info-box mb-4">
+      <p><strong>¿Cómo funciona este cálculo?</strong></p>
+
       <p>
-        <strong>Potencia recomendada (kW):</strong>
-        Se asume 0,15 kW × m² disponible.<br>
-        <code>potenciaReco = área (m²) × 0,15</code>
+        1. Primero vemos cuánta potencia de placas necesitamos. Cada metro
+        cuadrado de panel aporta aproximadamente 150 W (0,15 kW). Si tienes, por
+        ejemplo, 20 m², sería:
       </p>
+      <p style="margin-left: 1rem">20 m² × 0,15 kW/m² = 3 kW</p>
+
       <p>
-        <strong>Generación anual (kWh):</strong>
-        Un valor medio de 1 200 horas equivalentes/año.<br>
-        <code>generacionAnual = potenciaReco × 1200</code>
+        2. Luego calculamos cuánta energía generará tu instalación al año. En
+        nuestra zona, 1 kW de placa produce unas 1 200 horas al año. Con 3 kW,
+        sería:
       </p>
+      <p style="margin-left: 1rem">3 kW × 1 200 horas = 3 600 kWh al año</p>
+
       <p>
-        <strong>Ahorro anual (€):</strong>
-        Multiplica la energía por el precio del kWh.<br>
-        <code>ahorroAnual = generacionAnual × precioKwh</code>
+        3. Para saber cuánto ahorras, multiplicamos esa energía por el precio
+        que pagas por cada kilovatio-hora (kWh). Si el kWh cuesta 0,15 €:
       </p>
+      <p style="margin-left: 1rem">
+        3 600 kWh × 0,15 €/kWh = 540 € de ahorro al año
+      </p>
+
       <p>
-        <strong>Coste total (€):</strong>
-        Asumimos 1 000 € por kW instalado.<br>
-        <code>costeTotal = potenciaReco × 1000</code>
+        4. Ahora calculamos cuánto costaría instalar esas placas. Suponemos
+        alrededor de 1 000 € por cada kW instalado. Con 3 kW:
       </p>
+      <p style="margin-left: 1rem">3 kW × 1 000 €/kW = 3 000 € de inversión</p>
+
       <p>
-        <strong>Años de amortización:</strong>
-        <code>amortización = costeTotal / ahorroAnual</code>
+        5. Finalmente, para saber en cuántos años recuperas lo invertido,
+        dividimos la inversión entre el ahorro anual:
       </p>
+      <p style="margin-left: 1rem">3 000 € ÷ 540 €/año ≈ 5,5 años</p>
+
+      <p>De esta forma queda claro:</p>
+      <ul style="margin-left: 1.5rem; list-style-type: disc">
+        <li>Más metros cuadrados = más <strong>kW instalados</strong>.</li>
+        <li>
+          Con más <strong>kW</strong> generas más <strong>kWh</strong> al año.
+        </li>
+        <li>
+          Multiplicas esos kWh por el <strong>precio del kWh</strong> y obtienes
+          tu ahorro anual.
+        </li>
+        <li>
+          Divides la inversión total (kW × 1 000 €/kW) entre el ahorro anual
+          para saber la <strong>amortización</strong>.
+        </li>
+      </ul>
     </div>
 
     <!-- Formulario de simulación -->
-    <form (ngSubmit)="calcularAhorro()" class="simulator-form mx-auto" style="max-width: 600px;">
+    <form
+      (ngSubmit)="calcularAhorro()"
+      class="simulator-form mx-auto"
+      style="max-width: 600px"
+    >
       <div class="row g-3">
         <!-- Consumo mensual (kWh) -->
         <div class="col-12 col-md-6">
@@ -56,7 +87,9 @@
             placeholder="Ej: 350"
             required
           />
-          <div class="form-text text-muted">Introduce tu consumo medio mensual. Ej: 350 kWh</div>
+          <div class="form-text text-muted">
+            Introduce tu consumo medio mensual. Ej: 350 kWh
+          </div>
         </div>
 
         <!-- Precio kWh (€) -->
@@ -75,7 +108,9 @@
             placeholder="Ej: 0.15"
             required
           />
-          <div class="form-text text-muted">Introduce el coste medio por kWh. Ej: 0,15 €</div>
+          <div class="form-text text-muted">
+            Introduce el coste medio por kWh. Ej: 0,15 €
+          </div>
         </div>
 
         <!-- Área disponible (m²) -->
@@ -93,14 +128,14 @@
             placeholder="Ej: 20"
             required
           />
-          <div class="form-text text-muted">Metros cuadrados útiles para paneles. Ej: 20 m²</div>
+          <div class="form-text text-muted">
+            Metros cuadrados útiles para paneles. Ej: 20 m²
+          </div>
         </div>
 
         <!-- Botón de envío -->
         <div class="col-12 col-md-6 d-flex align-items-end">
-          <button type="submit" class="btn btn-warning w-100">
-            Calcular
-          </button>
+          <button type="submit" class="btn btn-warning w-100">Calcular</button>
         </div>
       </div>
     </form>
@@ -109,16 +144,17 @@
     <div *ngIf="resultadoVisible" class="result mx-auto mt-4 text-center">
       <h3 class="text-warning">Tu ahorro estimado</h3>
       <p class="mb-1">
-        <strong>Potencia recomendada:</strong> {{ potenciaReco | number:'1.1-1' }} kW
+        <strong>Potencia recomendada:</strong>
+        {{ potenciaReco | number : "1.1-1" }} kW
       </p>
       <p class="mb-1">
-        <strong>Ahorro anual aproximado:</strong> {{ ahorroAnual | number:'1.2-2' }} €
+        <strong>Ahorro anual aproximado:</strong>
+        {{ ahorroAnual | number : "1.2-2" }} €
       </p>
       <p>
-        <strong>Amortización estimada:</strong> {{ anosAmortizacion | number:'1.1-1' }} años
+        <strong>Amortización estimada:</strong>
+        {{ anosAmortizacion | number : "1.1-1" }} años
       </p>
     </div>
   </div>
 </section>
-
-

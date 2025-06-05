@@ -1,7 +1,42 @@
 <section class="savings-simulator-section py-5">
   <div class="container">
-    <!-- Título -->
-    <h2 class="section-title text-center mb-4">Calcula tu Ahorro Energético</h2>
+    <!-- Título con icono de información -->
+    <div class="d-flex justify-content-center align-items-center mb-3">
+      <h2 class="section-title me-2">Calcula tu Ahorro Energético</h2>
+      <i
+        class="bi bi-info-circle-fill text-warning info-icon"
+        (click)="toggleInfo()"
+        title="¿Cómo se calcula?"
+      ></i>
+    </div>
+
+    <!-- Explicación oculta por defecto -->
+    <div *ngIf="infoVisible" class="info-box mb-4">
+      <p>
+        <strong>Potencia recomendada (kW):</strong>
+        Se asume 0,15 kW × m² disponible.<br>
+        <code>potenciaReco = área (m²) × 0,15</code>
+      </p>
+      <p>
+        <strong>Generación anual (kWh):</strong>
+        Un valor medio de 1 200 horas equivalentes/año.<br>
+        <code>generacionAnual = potenciaReco × 1200</code>
+      </p>
+      <p>
+        <strong>Ahorro anual (€):</strong>
+        Multiplica la energía por el precio del kWh.<br>
+        <code>ahorroAnual = generacionAnual × precioKwh</code>
+      </p>
+      <p>
+        <strong>Coste total (€):</strong>
+        Asumimos 1 000 € por kW instalado.<br>
+        <code>costeTotal = potenciaReco × 1000</code>
+      </p>
+      <p>
+        <strong>Años de amortización:</strong>
+        <code>amortización = costeTotal / ahorroAnual</code>
+      </p>
+    </div>
 
     <!-- Formulario de simulación -->
     <form (ngSubmit)="calcularAhorro()" class="simulator-form mx-auto" style="max-width: 600px;">
@@ -85,4 +120,5 @@
     </div>
   </div>
 </section>
+
 

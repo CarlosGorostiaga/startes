@@ -91,3 +91,40 @@
     font-size: 0.95rem;
   }
 }
+
+
+/* Icono de información junto al título */
+.info-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.info-icon:hover {
+  color: #e6b800; /* Dorado más oscuro al pasar */
+}
+
+/* Caja que contiene la explicación */
+.info-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid #ffcc00;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  color: #333333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.info-box p {
+  margin-bottom: 0.75rem;
+}
+
+.info-box code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+

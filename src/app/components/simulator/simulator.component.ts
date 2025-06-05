@@ -13,15 +13,25 @@ export class SimulatorComponent {
 
   // Resultados
   resultadoVisible: boolean = false;
-  potenciaReco: number = 0;           // kW recomendados
-  ahorroAnual: number = 0;            // € anuales
-  anosAmortizacion: number = 0;       // años para amortizar  (sin ñ)
+  potenciaReco: number = 0;         // kW recomendados
+  ahorroAnual: number = 0;          // € anuales
+  anosAmortizacion: number = 0;     // años para amortizar (sin ñ)
+
+  // Para mostrar/ocultar la explicación
+  infoVisible: boolean = false;
 
   // Coste aproximado por kW instalado (€/kW)
-  private costoPorKw: number = 1000; // asunción: 1.000 €/kW instalado
+  private costoPorKw: number = 1000;      // asunción: 1.000 €/kW instalado
 
   // Horas equivalentes anuales de producción en España (h/año)
   private horasEquivAnuales: number = 1200; // valor medio para zona centro
+
+  /**
+   * Alterna la visibilidad de la explicación de la fórmula.
+   */
+  toggleInfo(): void {
+    this.infoVisible = !this.infoVisible;
+  }
 
   /**
    * Función que se dispara al enviar el formulario.
@@ -31,7 +41,7 @@ export class SimulatorComponent {
    *  - ahorroAnual (€) = generación anual * precioKwh
    *  - anosAmortizacion = (potenciaReco * costoPorKw) / ahorroAnual
    */
-  calcularAhorro() {
+  calcularAhorro(): void {
     if (
       this.consumo === null ||
       this.precioKwh === null ||
@@ -63,6 +73,8 @@ export class SimulatorComponent {
 
     // Mostrar los resultados
     this.resultadoVisible = true;
+
+    // Si la explicación estaba abierta, la cerramos al calcular
+    this.infoVisible = false;
   }
 }
-

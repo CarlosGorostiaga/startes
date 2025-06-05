@@ -1,14 +1,18 @@
-<section class="faq-section py-5 text-center">
-    <div class="container">
-      <h2 class="faq-title" style="color: #ffcc00;">Preguntas Frecuentes</h2>
-      <div *ngFor="let faq of faqs; let i = index" class="faq-card my-3">
-        <div class="faq-question" (click)="toggleFaq(i)">
-          <span>{{ faq.question }}</span>
-          <i class="bi" [ngClass]="faq.open ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
-        </div>
-        <div class="faq-answer" *ngIf="faq.open">
-          <p>{{ faq.answer }}</p>
-        </div>
+<!-- faq.component.html -->
+<section class="faq-section py-5">
+  <div class="container">
+    <!-- Encabezado -->
+    <h2 class="faq-title text-center mb-4">Preguntas Frecuentes</h2>
+
+    <!-- Cada tarjeta de pregunta -->
+    <div *ngFor="let faq of faqs; let i = index" class="faq-card mb-3">
+      <div class="faq-question d-flex justify-content-between align-items-center" (click)="toggleFaq(i)" [attr.aria-expanded]="faq.open">
+        <span class="question-text">{{ faq.question }}</span>
+        <i class="bi" [ngClass]="faq.open ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+      </div>
+      <div class="faq-answer" *ngIf="faq.open">
+        <p class="answer-text">{{ faq.answer }}</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>

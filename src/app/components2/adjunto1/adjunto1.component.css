@@ -1,44 +1,122 @@
-/*********** Estilos para la sección de introducción *************/
+/* ========================================
+   Styles para IntroComponent
+   ======================================== */
+
+/* Fuente Montserrat para todo el componente */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===== Sección de Introducción ===== */
 .intro-section {
-  background-color: #f8f9fa; /* Fondo claro */
-  color: #333; /* Color del texto */
-  font-family: "Montserrat", sans-serif;
-  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8e8e9 100%);
+  color: #333333;
+  padding: 3rem 1rem;
 }
 
-.intro-subtitle {
-  color: #ff9900; /* Color destacado para el subtítulo */
-  letter-spacing: 1px;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-}
-
-.intro-title {
-  font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.intro-text {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-family: "Montserrat", sans-serif;
-}
-
-/* Centrado vertical y horizontal en pantallas grandes */
+/* Centrado vertical en pantallas grandes */
 @media (min-width: 992px) {
   .intro-section {
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    padding: 0; /* Elimina el padding para un centrado perfecto */
+    align-items: center;
+    min-height: 60vh;
+    padding: 0;
   }
-
-  .intro-section .container-fluid {
-    max-width: 80%; /* Ancho máximo para que el texto no se estire demasiado */
+  .intro-container {
+    max-width: 700px;
   }
 }
+
+/* ===== Contenedor interno ===== */
+.intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ===== Subtítulo ===== */
+.intro-subtitle {
+  color: #ffcc00;
+  letter-spacing: 1.5px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== Título principal ===== */
+.intro-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #333333;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+/* Ajustes responsive para el título */
+@media (min-width: 768px) {
+  .intro-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===== Divisor decorativo ===== */
+.intro-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin-bottom: 1rem;
+}
+
+/* ===== Texto descriptivo ===== */
+.intro-text {
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Ajustes responsive para el texto */
+@media (min-width: 768px) {
+  .intro-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Botón CTA ===== */
+.btn-intro {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-intro:hover {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+/* ===== Espacios en móviles ===== */
+@media (max-width: 767px) {
+  .intro-section {
+    padding: 2rem 1rem;
+  }
+  .intro-title {
+    font-size: 1.75rem;
+  }
+  .intro-text {
+    font-size: 0.95rem;
+  }
+  .btn-intro {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+

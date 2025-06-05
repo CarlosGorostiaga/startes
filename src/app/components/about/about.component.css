@@ -1,0 +1,215 @@
+/* ========================================
+   Styles para AboutComponent
+   ======================================== */
+
+/* Fuente Montserrat para todo el componente */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===== Sección general ===== */
+.about-section {
+  position: relative;
+  background-color: #e8e8e9;
+  color: #333333;
+  overflow: hidden;
+}
+
+/* Capa de fondo tenue (opcional) */
+.about-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Puedes cambiar a una imagen ligera o un degradado suave */
+  background: rgba(232, 232, 233, 0.6);
+  z-index: 0;
+}
+
+/* Contenido por encima del fondo */
+.about-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Icono + Título ===== */
+.icon-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-main {
+  font-size: 3rem;
+  color: #ffcc00;
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .icon-main:hover {
+    transform: scale(1.1);
+  }
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #333333;
+  margin-top: 0.5rem;
+}
+
+/* ===== Subtítulo ===== */
+.about-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #666666;
+}
+
+/* ===== Descripción principal ===== */
+.about-description {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #444444;
+  line-height: 1.6;
+}
+
+/* ===== Filosofía / Valores ===== */
+.values-row {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (hover: hover) {
+  .value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.value-icon-wrapper {
+  background-color: #ffcc00;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.value-icon {
+  font-size: 2rem;
+  color: #1c1c1c;
+}
+
+@media (hover: hover) {
+  .value-card:hover .value-icon-wrapper {
+    background-color: #e6b800;
+  }
+}
+
+.value-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.value-text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* ===== Botón “Descubre Nuestros Servicios” ===== */
+.btn-explore {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-explore:hover {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 767px) {
+  .about-title {
+    font-size: 1.75rem;
+  }
+  .about-subtitle {
+    font-size: 1.1rem;
+  }
+  .about-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .value-card {
+    padding: 1.5rem 1rem;
+  }
+  .value-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  .value-icon {
+    font-size: 1.5rem;
+  }
+  .value-title {
+    font-size: 1.1rem;
+  }
+  .btn-explore {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-title {
+    font-size: 1.9rem;
+  }
+  .about-subtitle {
+    font-size: 1.2rem;
+  }
+  .about-description {
+    font-size: 1.05rem;
+  }
+  .value-card {
+    padding: 1.8rem 1.2rem;
+  }
+  .value-icon-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+  .value-icon {
+    font-size: 1.75rem;
+  }
+  .value-title {
+    font-size: 1.2rem;
+  }
+  .btn-explore {
+    padding: 0.65rem 1.7rem;
+    font-size: 0.95rem;
+  }
+}

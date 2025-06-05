@@ -1,7 +1,7 @@
+<!-- Navbar Mejorada -->
 <header>
   <nav
-    class="navbar navbar-expand-lg navbar-light border-bottom shadow-sm"
-    style="font-family: 'Montserrat', sans-serif; background-color: #e8e8e9;"
+    class="navbar navbar-expand-lg navbar-light shadow-sm ev-navbar"
   >
     <div class="container">
       <!-- Logo de la empresa -->
@@ -12,10 +12,10 @@
           height="32"
           class="me-2"
         />
-        <span class="fs-4 fw-semibold text-dark">STARTES</span>
+        <span class="fs-4 fw-semibold ev-navbar-brand">STARTES</span>
       </a>
 
-      <!-- Botón de colapso para móvil (icono minimalista) -->
+      <!-- Botón de colapso para móvil (hamburger) -->
       <button
         class="navbar-toggler border-0 p-0"
         type="button"
@@ -25,7 +25,6 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <!-- SVG minimalista: tres líneas finas -->
         <svg
           width="24"
           height="24"
@@ -60,75 +59,61 @@
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <!-- Inicio -->
           <li class="nav-item">
-            <a class="nav-link text-dark fw-medium" href="#">
+            <a class="nav-link ev-nav-link" href="#">
               Inicio
             </a>
           </li>
 
-          <!-- ======= VISTA ESCRITORIO (dropdown) ======= -->
-          <li class="nav-item dropdown d-none d-lg-block">
-            <a
-              class="nav-link dropdown-toggle text-dark fw-medium"
-              href="#"
-              id="navbarDropdownServices"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Servicios
+          <!-- Servicios (vista escritorio: ítems individuales) -->
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link ev-nav-link" href="/cargadores">
+              Cargadores Eléctricos
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
-              <li>
-                <a class="dropdown-item" href="/cargadores">
-                  Cargadores Eléctricos
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/solar">
-                  Placas Fotovoltaicas
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/servicios-electricista">
-                  Servicios de Electricista
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/servicios-industria">
-                  Servicios para la Industria
-                </a>
-              </li>
-            </ul>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link ev-nav-link" href="/solar">
+              Placas Fotovoltaicas
+            </a>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link ev-nav-link" href="/servicios-electricista">
+              Electricista
+            </a>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link ev-nav-link" href="/servicios-industria">
+              Industria
+            </a>
           </li>
 
-          <!-- ======= VISTA MÓVIL (ítems ya desplegados) ======= -->
+          <!-- Servicios (vista móvil: desplegados) -->
           <li class="nav-item d-lg-none">
-            <span class="nav-link text-dark fw-medium">Servicios</span>
+            <span class="nav-link ev-nav-link">Servicios</span>
           </li>
           <li class="nav-item d-lg-none ps-3">
-            <a class="nav-link text-dark" href="/cargadores">
+            <a class="nav-link ev-nav-link" href="/cargadores">
               Cargadores Eléctricos
             </a>
           </li>
           <li class="nav-item d-lg-none ps-3">
-            <a class="nav-link text-dark" href="/solar">
+            <a class="nav-link ev-nav-link" href="/solar">
               Placas Fotovoltaicas
             </a>
           </li>
           <li class="nav-item d-lg-none ps-3">
-            <a class="nav-link text-dark" href="/servicios-electricista">
-              Servicios de Electricista
+            <a class="nav-link ev-nav-link" href="/servicios-electricista">
+              Electricista
             </a>
           </li>
           <li class="nav-item d-lg-none ps-3">
-            <a class="nav-link text-dark" href="/servicios-industria">
-              Servicios para la Industria
+            <a class="nav-link ev-nav-link" href="/servicios-industria">
+              Industria
             </a>
           </li>
 
           <!-- Contacto -->
           <li class="nav-item">
-            <a class="nav-link text-dark fw-medium" href="#contact">
+            <a class="nav-link ev-nav-link" href="#contact">
               Contacto
             </a>
           </li>
@@ -137,3 +122,4 @@
     </div>
   </nav>
 </header>
+

@@ -1,0 +1,102 @@
+/* ========================================
+   Estilos para la Navbar Mejorada
+   ======================================== */
+
+/* Asegura Montserrat en toda la Navbar */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===== Navbar principal ===== */
+.ev-navbar {
+  background: linear-gradient(135deg, #e8e8e9 0%, #f8f9fa 100%);
+  border-bottom: 1px solid #dddddd;
+  padding: 0.5rem 1rem;
+}
+
+/* Marca (logo + texto) */
+.ev-navbar-brand {
+  color: #333333;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.ev-navbar-brand:hover {
+  text-decoration: none;
+  color: #ffcc00;
+}
+
+/* ===== Links de navegación ===== */
+.ev-nav-link {
+  color: #333333;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover y estado activo */
+.ev-nav-link:hover {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.ev-nav-link.active {
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+/* Espaciado entre ítems en desktop */
+@media (min-width: 992px) {
+  .ev-navbar .navbar-nav .nav-item + .nav-item {
+    margin-left: 1.5rem;
+  }
+}
+
+/* ===== Botón de colapso (hamburger) ===== */
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ===== Dropdown para vista móvil (colapsado) ===== */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
+  }
+
+  .navbar-nav .nav-item.ps-3 {
+    padding-left: 2rem;
+  }
+}
+
+/* ===== Ajustes de color para ícono del hamburger ===== */
+.navbar-toggler svg {
+  stroke: #333333;
+}
+
+.navbar-toggler:hover svg {
+  stroke: #ffcc00;
+}
+
+/* ===== Separador inferior ===== */
+.ev-navbar {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Cursor y limpieza de lienzos ===== */
+.navbar-nav .nav-link {
+  cursor: pointer;
+}
+
+/* ===== Ajuste cuando está expandido en mobile ===== */
+.navbar-collapse.collapse.show {
+  padding-top: 0.5rem;
+}

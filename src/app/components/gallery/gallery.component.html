@@ -1,0 +1,76 @@
+<section class="projects-gallery-section py-5">
+  <div class="container">
+    <!-- 1. Título de la galería -->
+    <h2 class="section-title text-center mb-2">Proyectos Destacados</h2>
+    <p class="section-subtitle text-center mb-5">
+      Descubre algunos de nuestros trabajos más exitosos y cómo generan ahorro real
+    </p>
+
+    <!-- 2. Cada proyecto ocupa toda la fila -->
+    <div class="row g-4">
+      <div *ngFor="let proyecto of proyectos" class="col-12">
+        <div class="card project-card-vertical" (click)="openLightbox(proyecto)">
+          <div class="image-wrapper position-relative">
+            <img
+              [src]="proyecto.images[0]"
+              [alt]="proyecto.alts[0]"
+              class="card-img-top project-img-vertical"
+            />
+            <!-- Leyenda superpuesta (overlay dorado) -->
+            <div class="caption-overlay position-absolute bottom-0 w-100 text-center px-3 py-2">
+              <span class="project-caption">{{ proyecto.caption }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Lightbox (modal) -->
+  <div
+    *ngIf="selectedProyecto"
+    class="lightbox position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center"
+    (click)="closeLightbox()"
+  >
+    <!-- Evita que el clic en el contenido cierre el lightbox -->
+    <div class="lightbox-content position-relative" (click)="$event.stopPropagation()">
+      <!-- Flecha izquierda -->
+      <button
+        class="lightbox-nav prev"
+        *ngIf="selectedProyecto.images.length > 1"
+        (click)="prevImage()"
+      >
+        ‹
+      </button>
+
+      <!-- Imagen central -->
+      <img
+        [src]="selectedProyecto.images[selectedIndex]"
+        [alt]="selectedProyecto.alts[selectedIndex]"
+        class="img-fluid lightbox-img"
+      />
+
+      <!-- Flecha derecha -->
+      <button
+        class="lightbox-nav next"
+        *ngIf="selectedProyecto.images.length > 1"
+        (click)="nextImage()"
+      >
+        ›
+      </button>
+
+      <!-- Pie del lightbox con la leyenda -->
+      <p class="lightbox-caption mt-3 text-center">
+        {{ selectedProyecto.caption }} (Imagen {{ selectedIndex + 1 }} de
+        {{ selectedProyecto.images.length }})
+      </p>
+
+      <!-- Botón de cerrar -->
+      <button class="lightbox-close btn btn-warning" (click)="closeLightbox()">
+        ✕
+      </button>
+    </div>
+  </div>
+</section>
+
+

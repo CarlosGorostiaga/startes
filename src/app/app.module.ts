@@ -40,6 +40,7 @@ import { CustomerReviewsComponent } from './components/customer-reviews/customer
 import { TrustedCompaniesComponent } from './components/trusted-companies/trusted-companies.component';
 import { UbicationComponent } from './components/ubication/ubication.component';
 import { SimulatorComponent } from './components/simulator/simulator.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { SimulatorComponent } from './components/simulator/simulator.component';
     TrustedCompaniesComponent,
     UbicationComponent,
     SimulatorComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,

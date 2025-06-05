@@ -19,6 +19,7 @@
   font-family: 'Montserrat', sans-serif;
   color: #ffcc00;
   font-weight: 800;
+  justify-content: center;
 }
 
 /* ===== Formulario ===== */
@@ -89,6 +90,9 @@
   }
   .result p {
     font-size: 0.95rem;
+  }
+  .section-title h2{
+    justify-content: center;
   }
 }
 

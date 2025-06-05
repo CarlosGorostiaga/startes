@@ -1,108 +1,195 @@
+/* ========================================
+   Styles para StatsComponent (ajustado)
+   ======================================== */
+
+/* Asegura Montserrat en todo el componente */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===== Sección con imagen de fondo y overlay ===== */
 .stats-section {
   background-image: url("../../../assets/img/renovables2.png");
-  background-size: cover;
-  background-position: center;
+  background-size: contain;          /* Cambiado a contain */
+  background-position: center center;
   background-repeat: no-repeat;
-  height: 50vh;
   position: relative;
+  color: #ffffff;
+  min-height: 50vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  padding: 2rem 0;
 }
 
-@media (min-width: 992px) {
-  .stats-section {
-    height: 55vh; /* Ajuste a 55vh para evitar una altura demasiado grande */
-    max-height: 700px; /* Limita la altura máxima en pantallas grandes */
-    background-size: contain; /* Usa contain para mantener la proporción de la imagen */
+/* Overlay semitransparente oscuro para mejorar contraste */
+.stats-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Contenido por encima del overlay */
+.stats-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Título de la sección ===== */
+.stats-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffcc00;
+}
+
+/* ===== Tarjeta de cada estadística (burbuja) ===== */
+.stats-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 220px;   /* Aumentado de 180px a 220px */
+  height: 220px;  /* Aumentado de 180px a 220px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.25rem;
+}
+
+/* Hover suave en desktop */
+@media (hover: hover) {
+  .stats-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   }
 }
 
-/* Media query intermedia para pantallas medianas (768px - 992px) */
+/* Icono superior */
+.stat-icon {
+  font-size: 2rem;
+  color: #ffcc00;
+  margin-bottom: 0.5rem;
+}
+
+/* Número animado */
+.stats-card h2.count {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  /* Animación “pop-in” */
+  animation: pop-in 0.6s ease-out;
+}
+
+/* Etiqueta explicativa */
+.stat-label {
+  font-size: 1rem;
+  color: #dddddd;
+  margin-top: 0.25rem;
+  text-align: center;
+  z-index: 2;
+}
+
+/* ===== Animación pop-in ===== */
+@keyframes pop-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== Responsive Adjustments ===== */
+
+/* Pantallas grandes (≥992px) */
+@media (min-width: 992px) {
+  .stats-section {
+    min-height: 55vh;
+    max-height: 700px;
+  }
+
+  .stats-card {
+    width: 240px;   /* Aumentado de 200px a 240px */
+    height: 240px;  /* Aumentado de 200px a 240px */
+    padding: 1.5rem;
+  }
+
+  .stat-icon {
+    font-size: 2.5rem;
+  }
+
+  .stats-card h2.count {
+    font-size: 2.75rem;
+  }
+
+  .stat-label {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tablets / pantallas medianas (≥768px y <992px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .stats-section {
-    height: 50vh;
-    background-size: contain;
-    background-position: center;
-  }
-  
-  .stats-circle {
-    width: 150px;
-    height: 150px;
+    min-height: 50vh;
   }
 
-  .stats-circle h2 {
-    font-size: 1.5rem; /* Tamaño de fuente en pantallas medianas */
+  .stats-card {
+    width: 200px;   /* Aumentado de 170px a 200px */
+    height: 200px;  /* Aumentado de 170px a 200px */
+    padding: 1rem;
   }
 
-  .stats-circle p {
-    font-size: 1.1rem; /* Tamaño de fuente en pantallas medianas */
+  .stat-icon {
+    font-size: 2.25rem;
+  }
+
+  .stats-card h2.count {
+    font-size: 2.25rem;
+  }
+
+  .stat-label {
+    font-size: 1.125rem;
   }
 }
 
-@media (max-width: 576px) {
+/* Móviles (<768px) */
+@media (max-width: 767px) {
   .stats-section {
-    height: 60vh;
-    background-size: contain;
-    background-position: center;
-    margin-top: 5vh;
-    border: solid 20px white;
+    min-height: 60vh;
+    padding: 1.5rem 0;
+  }
+
+  .stats-card {
+    width: 180px;   /* Aumentado de 140px a 180px */
+    height: 180px;  /* Aumentado de 140px a 180px */
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .stat-icon {
+    font-size: 2rem;  /* Aumentado de 1.75rem a 2rem */
+  }
+
+  .stats-card h2.count {
+    font-size: 2rem;  /* Aumentado de 1.75rem a 2rem */
+  }
+
+  .stat-label {
+    font-size: 1rem;  /* Aumentado de 0.9rem a 1rem */
   }
 }
 
-.stats-circle {
-  width: 120px;
-  height: 120px;
-  background: rgba(4, 3, 7, 0.815);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #fff;
-  position: absolute;
-  padding: 15px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-}
 
-.stats-circle h2 {
-  font-size: 1.2rem; /* Tamaño de fuente para dispositivos móviles */
-  margin: 0;
-  color: #ffcc00 ;
-}
-
-.stats-circle p {
-  font-size: 0.9rem; /* Tamaño de fuente para dispositivos móviles */
-  margin: 0;
-}
-
-/* Estilos para pantallas grandes */
-@media (min-width: 992px) {
-  .stats-circle {
-    width: 200px;
-    height: 200px;
-  }
-
-  .stats-circle h2 {
-    font-size: 1.8rem; /* Tamaño de fuente en pantallas grandes */
-  }
-
-  .stats-circle p {
-    font-size: 1.3rem; /* Tamaño de fuente en pantallas grandes */
-  }
-}
-
-.top-left {
-  top: 10%;
-  left: 5%;
-}
-
-.bottom-right {
-  bottom: 10%;
-  right: 5%;
-}

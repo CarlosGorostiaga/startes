@@ -1,38 +1,146 @@
+/* ========================================
+   Sección “Nuestros Servicios”
+   ======================================== */
+
+/* Fuente Montserrat para todo el componente (si no lo has establecido globalmente) */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Fondo suave de la sección */
 .services-section {
-    background-color: #f8f9fa;
-  }
-  
-  .service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
+  background-color: #f8f9fa;
+}
+
+/* Título principal */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* ===== Caja de la tarjeta ===== */
+.service-card {
+  border: none;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+/* Elevación y “flotado” al pasar el ratón */
+@media (hover: hover) {
   .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
   }
-  
-  .service-card img {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+}
+
+/* Wrapper de la imagen para permitir overlay */
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9; /* Mantiene proporción 16:9 */
+  overflow: hidden;
+}
+
+/* Imagen de portada del servicio */
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Escala leve de la imagen al hacer hover sobre la tarjeta */
+@media (hover: hover) {
+  .service-card:hover .service-img {
+    transform: scale(1.05);
   }
-  
-  .service-card .card-title {
-    color: #ffcc00;
-    font-weight: bold;
+}
+
+/* Overlay semitransparente dorado al hover */
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 204, 0, 0); /* Por defecto transparente */
+  transition: background-color 0.3s ease;
+}
+
+@media (hover: hover) {
+  .service-card:hover .img-overlay {
+    background-color: rgba(255, 204, 0, 0.2); /* 20% de dorado */
   }
-  
-  .service-card .card-text {
-    color: #666;
+}
+
+/* ===== Cuerpo de la tarjeta ===== */
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Título del servicio */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffcc00;
+  margin-bottom: 0.75rem;
+}
+
+/* Alineación de icono y texto en el título */
+.card-title i {
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+
+/* Descripción del servicio */
+.card-text {
+  color: #666666;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* ===== Botón “Saber más” ===== */
+.btn-service {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn-service:hover {
+  background-color: #e6b800; /* Dorado más oscuro al hover */
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+/* ===== Espaciado en móviles ===== */
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1rem;
   }
-  
-  .btn-warning {
-    background-color: #ffcc00;
-    color: #1c1c1c;
-    border: none;
-  }
-  
-  .btn-warning:hover {
-    background-color: #e6b800;
-    color: #1c1c1c;
-  }
-  
+}
+
+/* ===== Separador si hay más de 4 servicios ===== */
+.row.row-cols-1.row-cols-md-2.g-4 {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.row.row-cols-1.row-cols-md-2.g-4 > .col {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}

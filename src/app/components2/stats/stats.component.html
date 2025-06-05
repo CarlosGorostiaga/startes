@@ -1,16 +1,34 @@
-<section id="stats" #statsSection class="stats-section py-0 text-white position-relative">
-    <div class="container position-relative text-center">
-      <div class="stats-circle top-left">
-        <h2 class="count display-4">
-          {{ installationsCount }}+
-        </h2>
-        <p>Instalaciones en Hogares</p>
+<!-- stats.component.html -->
+<section
+  id="stats"
+  #statsSection
+  class="stats-section position-relative d-flex align-items-center"
+>
+  <!-- Capa overlay oscura para dar contraste -->
+  <div class="overlay"></div>
+
+  <div class="container text-center position-relative">
+    <!-- (Opcional) Título grande de la sección -->
+    <h3 class="stats-heading mb-5">Nuestros Logros</h3>
+
+    <div class="row justify-content-center gy-4">
+      <!-- Estadística 1 -->
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <div class="stats-card">
+          <i class="bi bi-house-fill stat-icon"></i>
+          <h2 class="count display-4 mb-2">{{ installationsCount }}+</h2>
+          <p class="stat-label">Instalaciones en Hogares</p>
+        </div>
       </div>
-      <div class="stats-circle bottom-right">
-        <h2 class="count display-4" >
-          {{ energySavedCount }} kWh
-        </h2>
-        <p>Energía Ahorrada</p>
+
+      <!-- Estadística 2 -->
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <div class="stats-card">
+          <i class="bi bi-lightning-charge-fill stat-icon"></i>
+          <h2 class="count display-4 mb-2">{{ energySavedCount }} kWh</h2>
+          <p class="stat-label">Energía Ahorrada</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

@@ -1,27 +1,107 @@
-/* Estilo móvil por defecto (vista en columna) */
-.service-section {
-    margin-bottom: 2rem;
-    /* border: solid 1px red */
+/* ========================================
+   ServiciosComponent Styles
+   ======================================== */
+
+/* Asegura Montserrat en todo el componente */
+:host {
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+}
+
+/* Contenedor general */
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* ===== Contenido de texto ===== */
+.service-content {
+  text-align: left;
+}
+
+.service-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+/* Línea decorativa bajo el título */
+.title-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #ffcc00;
+}
+
+/* Párrafo descriptivo */
+.service-description {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #555555;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* ===== Imagen del servicio ===== */
+.service-image-wrapper {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .service-image-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
-  
-  /* Estilo horizontal para pantallas grandes */
-  @media (min-width: 992px) {
-    /* Contenedor general */
-    .services-container {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    /* Cada servicio como una columna */
-    .service-section {
-      flex: 1;
-      max-width: 30%; /* Ajusta el tamaño según el espacio disponible */
-      text-align: center;
-      margin: 0 10px;
-    }
-  
-    .service-image img {
-      max-width: 100%;
-      height: auto;
-    }
+
+  .service-image-wrapper:hover .service-image {
+    transform: scale(1.05);
   }
+}
+
+/* ===== Responsive Adjustments ===== */
+
+/* En móviles (<768px), centramos el texto y la imagen */
+@media (max-width: 767px) {
+  .service-content {
+    text-align: center;
+  }
+  .title-divider {
+    margin: 0 auto;
+  }
+  .service-image-wrapper {
+    width: 90%;
+  }
+}
+
+/* En pantallas medias (768px–991px), adaptamos tamaños */
+@media (min-width: 768px) and (max-width: 991px) {
+  .service-title {
+    font-size: 1.5rem;
+  }
+  .service-description {
+    font-size: 1.05rem;
+  }
+}
+
+/* En pantallas grandes (≥992px), aseguramos texto a la izquierda */
+@media (min-width: 992px) {
+  .service-content {
+    text-align: left;
+  }
+  .service-image-wrapper {
+    width: 100%;
+    max-width: 450px;
+  }
+}

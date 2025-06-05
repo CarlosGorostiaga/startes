@@ -15,18 +15,26 @@
 <app-recarga2></app-recarga2>
 
 
-
-<!-- Sección de Calculadora -->
-<section class="calculator-section py-5 text-center" style="font-family: 'Montserrat', sans-serif;">
-  <div class="container">
-    <h2 class="mb-3" style="color: #ffcc00; font-weight: bold;">¿Quieres calcular cuánto costaría tu instalación?</h2>
+<!-- home.component.html (o donde tengas la sección) -->
+<section
+  class="calculator-section py-5 text-center"
+  style="font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);"
+>
+  <div class="container position-relative">
+    <h2 class="mb-3" style="color: #ffcc00; font-weight: bold;">
+      ¿Quieres calcular cuánto costaría tu instalación?
+    </h2>
     <p class="lead text-dark mb-4">
       ¡Es muy fácil! Descubre el coste aproximado de tu instalación y cuánto podrías ahorrar con nuestra calculadora.
     </p>
-    <a href="#calculadora" class="btn btn-warning btn-lg mb-5" style="border-radius: 50px;">Calcula tu ahorro ahora</a>
-  </div>
+    <!-- Aquí, en lugar de href, llamamos a scrollToCalculadora() -->
+    <a
+      class="btn btn-warning btn-lg mb-5"
+      style="border-radius: 50px; cursor: pointer;"
+      (click)="scrollToCalculadora()"
+      >Calcula tu ahorro ahora</a
+    >
 
-  <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <app-calculadora-recarga (calculationCompleted)="updateMessage($event)"></app-calculadora-recarga>
@@ -34,6 +42,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Sección de Cargadores -->
 <section class="chargers-section py-1 text-center" style="font-family: 'Montserrat', sans-serif;">

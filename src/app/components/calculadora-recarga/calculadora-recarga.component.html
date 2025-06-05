@@ -1,5 +1,5 @@
 <!-- calculadora-recarga.component.html -->
-<div class="calculator-container">
+<div class="calculator-container" id="calculadora">
   <!-- Indicador de progreso -->
   <div *ngIf="currentStep > 0 && currentStep <= totalSteps" class="progress mb-4">
     <div class="progress-bar" role="progressbar" [style.width.%]="(currentStep / totalSteps) * 100"></div>

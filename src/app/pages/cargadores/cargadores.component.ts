@@ -38,4 +38,14 @@ export class CargadoresComponent implements AfterViewInit {
       }
     }, 1000); // Agrega un retraso para asegurar que el formulario esté en el DOM
   }
+
+    scrollToCalculadora() {
+    // Ponemos un pequeño timeout para garantizar que el DOM esté fully rendered
+    setTimeout(() => {
+      const elemento = document.getElementById('calculadora');
+      if (elemento) {
+        elemento.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 0);
+  }
 }

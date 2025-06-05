@@ -1,106 +1,202 @@
-/* Estilos para la sección de servicios */
-.services-section {
-  background-color: #f8f9fa;
-  /* border: solid 1px red; */
+/* =========================================
+   Estilos para la Sección de EV Charging
+   ========================================= */
+
+/* Asegura Montserrat en todo el componente */
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Estilos para las tarjetas */
-.service-card {
-  border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
+/* ===== Sección de Introducción ===== */
+.ev-intro-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8e8e9 100%);
+  color: #333333;
+  padding: 3rem 1rem;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Estilo del ícono en cada tarjeta */
-.icon {
-  font-size: 2.5rem;
-  color: #ffcc00; /* Color de ícono */
-}
-
-.card-title {
-  font-weight: bold;
-  color: #333;
-  font-family: "Montserrat", sans-serif;
-}
-
-.card-text {
-  color: #666;
-  font-family: "Montserrat", sans-serif;
-}
-
-
-
-/***************** Estilo para la sección de características *********************/
-.features-section {
-  background-color: #f8f9fa; /* Fondo claro */
-  padding: 20px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.feature-block {
-  margin-bottom: 20px;
-}
-
-.feature-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 2vh;
-}
-
-.feature-list {
-  list-style-type: disc;
-  padding-left: 20px;
-  color: #555;
-}
-
-.feature-list li {
-  margin-bottom: 5px;
-  line-height: 1.6;
-}
-
-/* Estilo para pantallas grandes */
 @media (min-width: 992px) {
-  .feature-block {
-    margin-bottom: 0; /* Eliminar margen inferior en pantallas grandes */
+  .ev-intro-section {
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    padding: 0;
+  }
+  .ev-intro-container {
+    max-width: 700px;
+  }
+}
+
+.ev-intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.ev-intro-subtitle {
+  color: #ffcc00;
+  letter-spacing: 1.5px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.ev-intro-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #333333;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .ev-intro-title {
+    font-size: 2.25rem;
+  }
+}
+
+.ev-intro-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin-bottom: 1rem;
+}
+
+.ev-intro-text {
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+@media (min-width: 768px) {
+  .ev-intro-text {
+    font-size: 1.1rem;
+  }
+}
+
+.ev-btn-intro {
+  background-color: #ffcc00;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.ev-btn-intro:hover {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .ev-intro-section {
+    padding: 2rem 1rem;
+  }
+  .ev-intro-title {
+    font-size: 1.5rem;
+  }
+  .ev-intro-text {
+    font-size: 0.95rem;
+  }
+  .ev-btn-intro {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 
 
-/*********** Estilos para la sección de introducción *************/
-.intro-section {
-  background-color: #f8f9fa; /* Fondo claro */
-  color: #333; /* Color del texto */
-  font-family: 'Montserrat', sans-serif;
-  padding: 20px;
+/* ===== Sección de Tarjetas de Servicios ===== */
+.ev-services-section {
+  background-color: #f8f9fa;
+  padding: 3rem 1rem;
 }
 
-.intro-subtitle {
-  color: #ffb400; /* Color destacado para el subtítulo */
-  letter-spacing: 1px;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-
+.ev-services-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.intro-title {
-  font-weight: bold;
+.ev-service-card {
+  border: none;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.ev-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ev-service-icon-wrapper {
+  background-color: #ffcc00;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.ev-service-icon {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  color: #1c1c1c;
 }
 
-.intro-text {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-family: 'Montserrat', sans-serif;
+.ev-service-card:hover .ev-service-icon-wrapper {
+  background-color: #e6b800;
+}
 
+.ev-service-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.ev-service-text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* Asegura que las tarjetas ocupen la misma altura */
+.ev-services-section .row > .col-12 {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Espaciado móvil */
+@media (max-width: 767px) {
+  .ev-service-card {
+    padding: 1.5rem 1rem;
+  }
+  .ev-service-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  .ev-service-icon {
+    font-size: 1.75rem;
+  }
+  .ev-service-title {
+    font-size: 1.15rem;
+  }
+  .ev-service-text {
+    font-size: 0.95rem;
+  }
 }

@@ -10,13 +10,13 @@
 
 /* ===== Sección con imagen de fondo y overlay ===== */
 .stats-section {
-  background-image: url("../../../assets/img/renovables2.png");
-  background-size: contain;          /* Cambiado a contain */
+  background-image: url("https://res.cloudinary.com/djlp5cdsx/image/upload/v1748715310/solar-panel2_dibaqd.jpg");
+  /* background-size: contain;    */
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
   color: #ffffff;
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 2rem 0;
